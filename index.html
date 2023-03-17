@@ -25,7 +25,7 @@
                 </div>
                 <div class="header-nav">
                     <ul class="header-nav-lists hidden">
-                        <li class="header-nav-lists-items" onmouseover="event.stopPropagation()">
+                        <li class="header-nav-lists-items" onclick="event.stopPropagation()">
                             <div class="nav-lists-items-title">
                                 <a href="#">Rạp chiếu</a>
                                 <i class="fa-sharp fa-solid fa-angle-down"></i>
@@ -45,7 +45,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="header-nav-lists-items" onmouseover="event.stopPropagation()">
+                        <li class="header-nav-lists-items" onclick="event.stopPropagation()">
                             <div class="nav-lists-items-title">
                                 <a href="#">Lịch chiếu</a>
                                 <i class="fa-sharp fa-solid fa-angle-down"></i>
@@ -58,7 +58,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="header-nav-lists-items" onmouseover="event.stopPropagation()">
+                        <li class="header-nav-lists-items" onclick="event.stopPropagation()">
                             <div class="nav-lists-items-title">
                                 <a href="#">Blog điện ảnh</a>
                                 <i class="fa-sharp fa-solid fa-angle-down"></i>
@@ -89,7 +89,1071 @@
             </div>
         </div>
     </header>
+    <main id="main">
+        <section id="banner">
+            <div class="container">
+                <div class="banner-wrapper">
+                    <div class="banner-text">
+                        <h1 class="banner-text-title">
+                            Đặt mua vé xem phim MoMo
+                        </h1>
+                        <div class="banner-text-col">
+                            <div class="banner-text-col-items">
+                                <i class="fa-sharp fa-solid fa-check"></i>
+                                <span>Du hí các rạp<b>,  trải nghiệm phim hay</b></span>
+                            </div>
+                            <div class="banner-text-col-items">
+                                <i class="fa-sharp fa-solid fa-check"></i>
+                                <span><b>Đặt vé trực tiếp</b>, thanh toán xong ngay</span>
+                            </div>
+                            <div class="banner-text-col-items">
+                                <i class="fa-sharp fa-solid fa-check"></i>
+                                <span>Gợi ý cho bạn<b>, suất chiếu gần đây</b></span>
+                            </div>
+                            <div class="banner-text-col-items">
+                                <i class="fa-sharp fa-solid fa-check"></i>
+                                <span><b>Lịch sử đặt vé</b> được lưu lại ngay</span>
+                            </div>
+                        </div>
+                        <div class="banner-text-button">
+                            <button>ĐẶT VÉ NGAY</button>
+                        </div>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://static.mservice.io/img/momo-upload-api-210820191534-637650837346813468.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="bg-current-movie">
+            <div class=" bg-current-movie container">
+                <h1 class="current-movie-title">Phim đang chiếu</h1>
+                <div class="current-movie-flex">
+                    <div class="current-movie-flex-wrapper">
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2387715875092967-ddmm.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                                <span class="items-top-number-bottom">1</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Hiệp Sĩ Mặt Nạ Đại Chiến: Đấu Trường Sinh Tử</a>
+                                <p class="current-movie-flex-items-bottom-category">Khoa Học Viễn Tưởng, Phiêu Lưu</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>83%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90579154820471367-HO01WswBGMg0B3quND3mYZxNHN.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                                <span class="items-top-number-bottom">2</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Siêu lừa gặp siêu lầy</a>
+                                <p class="current-movie-flex-items-bottom-category">Hài</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/86928996225187344-2uxNnsL4tCK2c4d9FuiCoea4ku7.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                                <span class="items-top-number-bottom">3</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Người Kiến và Chiến Binh Ong: Thế Giới Lượng Tử</a>
+                                <p class="current-movie-flex-items-bottom-category">Hài, Khoa Học Viễn Tưởng</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>75%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2292771984680044-qBYlhKvNsjI5Gs8FQGlUMxIEICH.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                                <span class="items-top-number-bottom">4</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Khi Ta Hai Lăm</a>
+                                <p class="current-movie-flex-items-bottom-category">Hài, Chính Kịch</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90230048152521353-kOvKHespgDEfzbYpq1cas2i8EZn.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                                <span class="items-top-number-bottom">5</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Nhà Bà Nữ</a>
+                                <p class="current-movie-flex-items-bottom-category">Chính Kịch</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>82%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2891502235468604-xjELUZg6Uk0TxfaWKfQfQ7MUXrg.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">P</span>
+                                <span class="items-top-number-bottom">6</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Chuột Nhí và Sứ Mệnh Thần Biển</a>
+                                <p class="current-movie-flex-items-bottom-category">Hoạt Hình, Giả Tượng</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2387715875092967-ddmm.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                                <span class="items-top-number-bottom">7</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Phi Vụ Đào Mỏ</a>
+                                <p class="current-movie-flex-items-bottom-category">Hài,Gia Đình</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1778168236319347-5.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">18+</span>
+                                <span class="items-top-number-bottom">8</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Thánh Vật Của Quỷ</a>
+                                <p class="current-movie-flex-items-bottom-category">Kinh Dị, Gay Cấn</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>25%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2297701952378539-pc75KETPdVnqHWCum3mFnmM0nSn.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                                <span class="items-top-number-bottom">9</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Lúc Đó Tôi Đã Chuyển Sinh Thành Slime</a>
+                                <p class="current-movie-flex-items-bottom-category">Hoạt Hình, Giả Tượng</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>86%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2297264180046238-mAIwvwvdvNcn9SbxtfyJ8G3LJdX.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">18+</span>
+                                <span class="items-top-number-bottom">10</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Giáo Sĩ Qodrat</a>
+                                <p class="current-movie-flex-items-bottom-category">Kinh Dị, Chính Kịch</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1868644912903193-zLwrZgQdkHcS7Jw2pxpScuFeA23.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                                <span class="items-top-number-bottom">11/span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Cú Máy Chết Cười</a>
+                                <p class="current-movie-flex-items-bottom-category">Hài,Kinh Dị</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>36%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1869846529858043-fH3cVWMV5Dcks34blOUnSIBOBVL.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                                <span class="items-top-number-bottom">12</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Mất Tích</a>
+                                <p class="current-movie-flex-items-bottom-category">Gây Cấn,Chính Kịch,Bí Ẩn</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1769222641137689-5.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                                <span class="items-top-number-bottom">13</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Đàm Phán</a>
+                                <p class="current-movie-flex-items-bottom-category">Hình Sự, Hành Động</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>72%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1780173051398207-4.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                                <span class="items-top-number-bottom">14</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Lạc & Tìm</a>
+                                <p class="current-movie-flex-items-bottom-category">Gây Cấn</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>27%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1777944753676292-5.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">P</span>
+                                <span class="items-top-number-bottom">15</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Bé Tiên Rắc Rối</a>
+                                <p class="current-movie-flex-items-bottom-category">Hài,Hoạt Hình,Phiêu Lưu,Gia Đình,Giả Tưởng</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>67%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/86928996225187344-2uxNnsL4tCK2c4d9FuiCoea4ku7.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                                <span class="items-top-number-bottom">16</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Người Kiến và Chiến Binh Ong: Thế Giới Lượng Tử</a>
+                                <p class="current-movie-flex-items-bottom-category">Hài, Khoa Học Viễn Tưởng</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>75%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1006713140774836-6kRczrPsqRmAlq4ix2jZsVV4Khr.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                                <span class="items-top-number-bottom">17</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Tuổi Trẻ Huy Hoàng</a>
+                                <p class="current-movie-flex-items-bottom-category">Chính Kịch</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>88%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/910980929714361-800x1000-someday-or-oneday.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                                <span class="items-top-number-bottom">18</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Muốn Gặp Anh</a>
+                                <p class="current-movie-flex-items-bottom-category">Khoa Học Viễn Tưởng, Lãng Mạn</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>81%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90230048152521353-kOvKHespgDEfzbYpq1cas2i8EZn.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                                <span class="items-top-number-bottom">19</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Nhà Bà Nữ</a>
+                                <p class="current-movie-flex-items-bottom-category">Chính Kịch</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>82%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://static.mservice.io/cinema/s256x384/momo-cdn-api-220615131831-637908959110796170.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">P</span>
+                                <span class="items-top-number-bottom">20</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Mèo Đi Hia: Điều Ước Cuối Cùng</a>
+                                <p class="current-movie-flex-items-bottom-category">Hài, Hoạt Hình</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>88%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90490447680691755-9WjqPhZAd2pIak7yx7ij2MGYR2f.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">18+</span>
+                                <span class="items-top-number-bottom">21</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Babylon</a>
+                                <p class="current-movie-flex-items-bottom-category">Hài, Chính Kịch</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/307946231381887-i2p70Ffn3OUpSzy375VZJKc5O5L.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                                <span class="items-top-number-bottom">22</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Vong Nhi</a>
+                                <p class="current-movie-flex-items-bottom-category">Kinh Dị</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>79%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-movie-flex-items">
+                            <div class="current-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90570419497814152-XV6ecel5ermCG6ofctciMAy6pk.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">18+</span>
+                                <span class="items-top-number-bottom">23</span>
+                            </div>
+                            <div class="current-movie-flex-items-bottom">
+                                <a href="#" class="current-movie-flex-items-bottom-title">Chị Chị Em Em 2</a>
+                                <p class="current-movie-flex-items-bottom-category">Chính Kịch, Gay Cấn</p>
+                                <div class="current-movie-flex-items-bottom-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>78%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="current-movie-previous"><i class="fa-solid fa-angle-left" style="display: none;"></i></div>
+                <div class="current-movie-next"><i class="fa-solid fa-angle-right"></i></div>
+
+            </div>
+        </section>
+        <section id="comingsoon-movie">
+            <div class=" bg-comingsoon-movie container">
+                <h1 class="comingsoon-movie-title text-xl">Phim sắp chiếu</h1>
+                <div class="comingsoon-movie-flex">
+                    <div class="comingsoon-movie-flex-wrapper gap">
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1942230700177970-5.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Khóa Chặt Cửa Nào Suzume</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Hoạt Hình, Phiêu Lưu</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/91248112558434555-7g4J08JRBGsYr7N7OYPMYYMKIbG.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Người Nhện: Du Hành Vũ Trụ Nhện</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Khoa Học Viễn Tưởng, Hoạt Hình</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90491023749644835-9xv2PnPV1UWdIRbpa2olHuN4FCX.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Anh Em Super Mario</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Hài, Hoạt Hình</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90576470029227527-y5rrebdZsGgpKb2U52rxMQTYbn0.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Mikey 17</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Khoa Học Viễn Tưởng, Phiêu Lưu</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/91346315107942627-ixLH2iM9at8BbuLr5wQWnCfwhJO.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Oppenheimer</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Lịch Sử, Chiến Tranh</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/91850961751815439-vBExOKDhhzHSxlYsjkI9d1QBIar.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Nhiệm Vụ Bất Khả Thi 7: Nghiệp Báo Phần 1</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Phiêu Lưu, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90489193594630743-y4MBS0SKE0pHR57vfYBxGhrkfcv.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Indiana Jones và Vòng Quay Số Phận</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Phiêu Lưu, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1701037389469618-qTXa7CJAj2RzAgxzuplEemPb87b.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Tia Chớp</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Khoa Học Viễn Tưởng, Phiêu Lưu</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90225202119197600-imzUKQbSanWDJcCsY9QKmk9qmDp.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Transformers: Quái Thú Trỗi Dậy</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Khoa Học Viễn Tưởng, Phiêu Lưu</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/575493613191880-7tbQEN9yEFkuxhsvF0eh7dckLTQ.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Quá Nhanh Quá Nguy Hiểm 10</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Hình Sự, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90225495554138848-xoCKrqqqi4wUCcI3MdFCq3Q9J0a.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Vệ Binh Dải Ngân Hà 3</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Khoa Học Viễn Tưởng, Phiêu Lưu</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1879175857940183-6WeBK3ivG5fBAt0RMrJrH0GhBrT.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Chuyện Xóm Tui: Con Nhót Mót Chồng</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Hài, Gia Đình</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/93258279569651451-jWanRvR7xL6Iolm70iSjJhr1VCO.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">18+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Renfield: Tay Sai Của Quỷ</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Hài, Kinh Dị</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2995715139969098-conmemay.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Thanh Gươm Diệt Quỷ: Đường Đến Làng Rèn Gươm</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Hoạt Hình, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/3433235140182742-123.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">13+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Tìm Nhà Cho Boss</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Hài, Lãng Mạn</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2992441971565431-wbJcJQ4L1OcgTDi8ydGXFiGpXX5.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">18+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">13 Nghi Thức Trừ Tà</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Kinh Dị, Chính Kịch</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/582075347249058-yAwJA1Y2Kt1XdbX72cL4MKtIDs3.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">18+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Tiếng Thét 6</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Kinh Dị, Bí Ẩn</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/88914590564785473-4uNyhvsjsN8AjBUQQW5Ubuu7YVY.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">16+</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title"><a class="jsx-314b02cb997a0a18 " href="/cinema/creed-iii-866">Tay Đấm Huyền Thoại 3</a></a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Chính Kịch</p>
+                            </div>
+                        </div>
+                        <div class="comingsoon-movie-flex-items">
+                            <div class="comingsoon-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://static.mservice.io/cinema/s256x384/momo-cdn-api-220615131532-637908957322118483.jpg" alt="">
+                                </a>
+                                <span class="items-top-age-position">P</span>
+                            </div>
+                            <div class="comingsoon-movie-flex-items-bottom">
+                                <a href="#" class="comingsoon-movie-flex-items-bottom-title">Tom & Jerry: Quậy Tung New York</a>
+                                <p class="comingsoon-movie-flex-items-bottom-category">Hài, Phiêu Lưu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comingsoon-movie-previous"><i class="fa-solid fa-angle-left" style="display: none;"></i></div>
+                <div class="comingsoon-movie-next"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="comingsoon-bottom">
+                    <a href="" class="comingsoon-bottom">
+                        <button class="comingsoon-bottom-button">Tìm phim chiếu rạp</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="bg-trailer-movie">
+            <div class=" bg-trailer-movie container">
+                <h1 class="trailer-movie-title text-xl">Trailer mới nhất</h1>
+                <div class="trailer-movie-flex">
+                    <div class="trailer-movie-flex-wrapper gap">
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://static.mservice.io/cinema/momo-cdn-api-220615142933-637909001734367129.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Mèo Đi Hia: Điều Ước Cuối Cùng</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90490447370909837-2ja6u29rJQZKpCMaYkgEcRYdwaA.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Babylon</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/307928999955560-vong-nhi-4-7036.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Vong Nhi</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90570419600058857-kDlnZC4bGXqxlT6HtnnexbbX1Ne.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Chị Chị Em Em 2</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/78933142712121817-lKoIpmbmd9vcjwgkmnVRp8YZEe3.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Shazam! Cơn Thịnh Nộ Của Các Vị Thần</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/90579154296984976-yDtpu2KVZL3GO2mhx7hIxgHZxUB.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Siêu Lừa Gặp Siêu Lầy</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2906166870445402-jXf9hWuLxBilWqUmWlMg542IOpi.jpg" alt="">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">65: Trận Chiến Thời Tiền Sử</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2374238080762187-juSUYWiLmic0juql4q20uSTlJW7.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Hiệp Sĩ Mặt Nạ Đại Chiến: Đấu Trường Sinh Tử</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://static.mservice.io/cinema/momo-upload-api-230222121358-638126648389624404.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Khi Ta Hai Lăm</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2891502191910288-5osplMfdotS9lGOSLPx3Zj8NuMi.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Chuột Nhí và Sứ Mệnh Thần Biển</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2889745448627516-gh76knAv7wtDJdrbDvQPmqhoZ4e.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Phi Vụ Đào Mỏ</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1778205748608189-jBDPhmB0LJ6fYTRatzqOsWp8lJw.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Thánh Vật Của Quỷ</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2297702185083792-qAatLCuRhvLyNJbH5IGmxLyU3tx.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Lúc Đó Tôi Đã Chuyển Sinh Thành Slime</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/2297264138461410-zRQZOqbkxf2wguBahJ6iOdJT7BX.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Giáo Sĩ Qodrat</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1868644861723679-4ojumOJv7MS4rMRhzgxbBoW0VrC.jpg" alt="">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Cú Máy Chết Cười</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1869846491636635-dhfU1d6V25BGEHDAoPrERQFmsl2.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Mất Tích</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1769304944222327-1cnknzG8hDYq6qYk75HGzFTre4m.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Đàm Phán</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1780183691875123-xPoflbDME9NFwxDKiynPRwUSUOM.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Lạc & Tìm</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1777949313082779-aI81IF6f68Nne2NFttKhyQMdJdN.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Bé Tiên Rắc Rối</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/86928996194348105-p9jmVtmm29dCHDHBFrOR6WNNaeO.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Người Kiến và Chiến Binh Ong: Thế Giới Lượng Tử</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/1006713011650956-nlNGMvqmm3h0eEUuiysSJ4nPbXN.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Tuổi Trẻ Huy Hoàng</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://img.cdn.vncdn.io/cinema/img/911111623966317-wPJKyDq1F9b4VtpF9dz8FPKVuS5.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Muốn Gặp Anh</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                        <div class="trailer-movie-flex-items">
+                            <div class="trailer-movie-flex-items-top">
+                                <a href="#" class="flex-items-image">
+                                    <img src="https://static.mservice.io/cinema/momo-upload-api-230117101026-638095470266284448.jpg" alt="trailer">
+                                </a>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="trailer-movie-flex-items-bottom">
+                                <a href="#" class="trailer-movie-flex-items-bottom-title">Nhà Bà Nữ</a>
+                                <p class="trailer-movie-flex-items-bottom-category">Gây Cấn, Hành Động</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trailer-movie-previous"><i class="fa-solid fa-angle-left" style="display: none;"></i></div>
+                <div class="trailer-movie-next"><i class="fa-solid fa-angle-right"></i></div>
+            </div>
+        </section>
+        <section id="calendar-movie">
+            <div class="calendar-movie-wrapper container">
+                <h1 class="calendar-movie-title text-xl"> Lịch chiếu phim</h1>
+                <div class="calendar-movie-border">
+                    <div class="calendar-movie-border-top">
+                        <div class="movie-border-top-location flex">
+                            <span class="movie-border-top-location-text">Vị trí</span>
+                            <div class="movie-border-top-location-option flex">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span class="location-option-list">TP.HCM</span>
+                                <i class="fa-sharp fa-solid fa-angle-down"></i>
+                            </div>
+                            <div class="movie-border-top-location-round flex">
+                                <i class="fa-solid fa-location-crosshairs"></i>
+                                <span class="location-option-text">Gần bạn</span>
+                            </div>
+                        </div>
+                        <div class="movie-border-top-brand">
+                            <div class="movie-border-top-brand-wrapper">
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://static.mservice.io/next-js/_next/static/public/cinema/dexuat-icon.svg" alt="all">
+                                    </div>
+                                    <div class="brand-items-title">Tất cả</div>
+                                </div>
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://static.mservice.io/placebrand/s/momo-upload-api-190709165424-636982880641515855.jpg" alt="CGV">
+                                    </div>
+                                    <div class="brand-items-title">CGV</div>
+                                </div>
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://static.mservice.io/blogscontents/momo-upload-api-210604170617-637584231772974269.png" alt=" cinema">
+                                    </div>
+                                    <div class="brand-items-title">Lotte Cinema</div>
+                                </div>
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://static.mservice.io/blogscontents/momo-upload-api-210604170617-637584231772974269.png" alt="Galaxy cinema">
+                                    </div>
+                                    <div class="brand-items-title">Galaxy Cinema</div>
+                                </div>
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://static.mservice.io/blogscontents/momo-upload-api-210604170453-637584230934981809.png" alt=" cinema">
+                                    </div>
+                                    <div class="brand-items-title">BHD Star</div>
+                                </div>
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://static.mservice.io/cinema/momo-upload-api-210813104719-637644484394328824.png" alt="Beta Cinema">
+                                    </div>
+                                    <div class="brand-items-title">Beta Cinema</div>
+                                </div>
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://static.mservice.io/blogscontents/momo-upload-api-210604170530-637584231309495829.png" alt="Cinestar">
+                                    </div>
+                                    <div class="brand-items-title">Cinestar</div>
+                                </div>
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://static.mservice.io/blogscontents/momo-upload-api-210604170511-637584231119272266.png" alt="Mega GS">
+                                    </div>
+                                    <div class="brand-items-title">Mega GS</div>
+                                </div>
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://img.mservice.io/momo_app_v2/new_version/img/THAO.MAI/DcineLogo.png" alt="DCINE">
+                                    </div>
+                                    <div class="brand-items-title">DCINE</div>
+                                </div>
+                                <div class="movie-border-top-brand-items">
+                                    <div class="brand-items-image">
+                                        <img src="https://static.mservice.io/cinema/momo-upload-api-221108100132-638034984925107129.png" alt="Cinemax">
+                                    </div>
+                                    <div class="brand-items-title">Cinemax</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-movie-border-bottom">
+                        <div class="calendar-movie-border-bottom-main">
+                            <div class="movie-border-bottom-main-left">
+                                <div class="movie-border-bottom-main-left-wrapper">
+                                    <div class="main-left-search flex">
+                                        <input type="text" class="main-left-search-input" placeholder="Tìm tên theo rạp">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     
     <script type="text/javascript" src="header.js"></script>
+    <script type="text/javascript" src="listfilm.js"></script>
+
 </body>
 </html>

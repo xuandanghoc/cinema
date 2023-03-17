@@ -19,7 +19,7 @@ let showListNav = (index) => {
 };
 
 Array.from(listItems).forEach((item, index) => {
-    item.addEventListener('mouseover', () => {
+    item.addEventListener('click', () => {
         showListNav(index);
     })
 });
@@ -33,7 +33,7 @@ let hideListNav = () => {
     });
 };
 
-window.addEventListener('mouseover', () => {
+window.addEventListener('click', () => {
     hideListNav();
 });
 

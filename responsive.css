@@ -1,13 +1,14 @@
 @media only screen and (max-width: 430px) {
     #header {
         padding: 6px 16px;
-        position: relative;
     }
     #header .header-wrapper {
         padding: 0;
     }
     #header .header-wrapper .header-nav {
         /* display: none; */
+        width: 100%;
+        padding: 0;
     }
     .header-logo .header-logo-image a img {
         width: 2.25rem;
@@ -44,15 +45,20 @@
       }
 
     .header-wrapper .header-nav {
-        position: absolute;
+        position: absolute;  
         top: 3.375rem;
         left: 0;
         right: 0;
+    }
+    .header-nav-lists-items .lists-items-sub {
+        position: static;
     }
     .header-wrapper .header-nav .header-nav-lists {
         display: flex;
         flex-direction: column;
         transition: 0.2s;
+        width: 100%;
+        padding: 0;
     }
     .header-wrapper .header-nav .header-nav-lists.hidden {
         display: none;
@@ -117,6 +123,66 @@
     .header-nav-lists-items .nav-lists-items-title {
         /* width: 100%; */
         height: 100%;
+    }
+
+    /* banner */
+
+    .banner-wrapper {
+        flex-direction: column-reverse;
+        padding: 2rem 1.25rem;
+    }
+    .banner-wrapper .banner-text {
+        width: 100%;
+    }
+    .banner-wrapper .banner-image {
+        width: 100%;
+    }
+    .banner-text h1 {
+        font-size: 1.5rem;
+        margin: 1.2rem 0;
+        font-weight: 0;
+    }
+    .banner-text .banner-text-button {
+        text-align: center  ;
+    }
+    .current-movie-flex {
+       
+    }
+    .bg-current-movie, 
+    .bg-comingsoon-movie {
+        padding: 2rem 0;
+    }
+    .current-movie-flex-items .current-movie-flex-items-top, 
+    .comingsoon-movie-flex-items .comingsoon-movie-flex-items-top {
+        height: 103px;
+    }
+    .current-movie-flex-items .current-movie-flex-items-top .flex-items-image img, 
+    .comingsoon-movie-flex-items .comingsoon-movie-flex-items-top .flex-items-image img {
+        width: 67.8px;
+    }
+    .bg-current-movie .current-movie-title, 
+    .bg-comingsoon-movie .comingsoon-movie-title, 
+    .bg-trailer-movie .trailer-movie-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.3rem;
+    }
+    .current-movie-next i {
+        /* right: -1.5rem; */
+    }
+    #comingsoon-movie .bg-comingsoon-movie {
+        padding: 2rem 0;
+    }
+
+    /* trailer movie */ 
+    .bg-trailer-movie {
+        padding: 2rem 0;
+    }
+    .trailer-movie-flex-items-top .flex-items-image img {
+        width: 21.6vw;
+        height: 100%;
+    }
+    .trailer-movie-flex-items .trailer-movie-flex-items-top {
+        height: 51px;
     }
 
 
