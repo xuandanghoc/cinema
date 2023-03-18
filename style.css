@@ -251,7 +251,7 @@ body li {
 }
 .current-movie-flex-items .current-movie-flex-items-top .flex-items-image img, 
 .comingsoon-movie-flex-items .comingsoon-movie-flex-items-top .flex-items-image img {
-   width: 13.9vw;
+   width: 14.65vw;
    border-radius: 4px;
    transition: 0.2s;
    object-fit: cover;
@@ -416,7 +416,7 @@ body li {
     background-size: cover;
 }
 .trailer-movie-flex-items-top .flex-items-image img {
-    width: 17.8vw;
+    width: 18.8vw;
     height: 100%;
     border-radius: 6px;
     transition: 0.2s;
