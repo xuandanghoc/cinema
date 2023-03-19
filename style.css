@@ -227,7 +227,7 @@ body li {
     background-size:cover;
 }
 .bg-current-movie {
-    padding: 3.5rem 2rem;
+    padding: 3.5rem 1.95rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -251,7 +251,7 @@ body li {
 }
 .current-movie-flex-items .current-movie-flex-items-top .flex-items-image img, 
 .comingsoon-movie-flex-items .comingsoon-movie-flex-items-top .flex-items-image img {
-   width: 14.65vw;
+   width: 13.9vw;
    border-radius: 4px;
    transition: 0.2s;
    object-fit: cover;
@@ -371,6 +371,9 @@ body li {
 .bg-comingsoon-movie .comingsoon-movie-flex {
     overflow: hidden;
 }
+.bg-comingsoon-movie .comingsoon-movie-flex .comingsoon-movie-flex-wrapper {
+    transition: .3s;
+}
 .comingsoon-movie-flex-items .comingsoon-movie-flex-items-top {
 
 }
@@ -416,7 +419,7 @@ body li {
     background-size: cover;
 }
 .trailer-movie-flex-items-top .flex-items-image img {
-    width: 18.8vw;
+    width: 17.8vw;
     height: 100%;
     border-radius: 6px;
     transition: 0.2s;
@@ -574,6 +577,85 @@ body li {
     cursor: pointer;
     text-align: center;
 }
+
+.movie-border-bottom-main-left .movie-border-bottom-main-left-wrapper {
+    width: 31.5%;
+    border-right: 1px solid #e5e5e5;
+}
+.main-left-list-cinema-name .list-brand {
+    display: flex;
+    align-items: center;
+    padding: 0.46rem 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    cursor: pointer;
+}
+.main-left-list-cinema-name .list-brand:hover {
+    background-color: rgb(253, 252, 252);
+}
+.main-left-list-cinema-name .list-brand img {
+    width: 11%;
+    padding: 1px;
+    border: 1px solid #e5e5e5;
+    object-fit: contain;
+    border-radius: 4px;
+}
+.main-left-list-cinema-name .list-brand .brand-name {
+    font-size: .9375rem;
+    line-height: 1.2rem;
+    color: rgb(65, 58, 58);
+    display: inline-block;
+    width: 90%;
+    padding-left: 0.75rem;
+}
+.main-left-list-cinema-name .list-brand i {
+    color: rgb(138, 135, 135);
+    font-size: .875rem;
+}
+.main-left-search {
+    position: relative;
+    padding: 0.5rem 0.75rem;
+}
+.main-left-search .main-left-search-input {
+    width: 100%;
+    padding: 9px 40px 9px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    color: rgb(138, 135, 135);
+    font-size: .875rem;
+
+}
+.main-left-search i {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    font-size: 1rem;
+    padding: 4px;
+    color: rgb(138, 135, 135);
+}
+.main-left-list-cinema .main-left-list-cinema-show-more {
+    font-size: .875rem;
+    color: var(--pink);
+    font-weight: 550;
+    line-height: 1.2rem;
+    padding: 4px 16px;
+    border-radius: 1rem;
+    border: 1px solid var(--pink);
+    background-color: rgb(255,248,250);
+    cursor: pointer;
+}
+.main-left-list-cinema .main-left-list-cinema-show-more:hover {
+    background-color: rgb(246, 237, 240);
+}
+.main-left-list-cinema .main-left-list-cinema-button {
+    text-align: center;
+    padding: 1.875rem 0;
+}
+.main-left-list-cinema .main-left-list-cinema-name {
+    overflow: hidden;
+}
+
+
 
 
 

@@ -1,7 +1,5 @@
-let listElements = document.createElement('li');
-listElements.setAttribute('class', 'list-brand');
+
 let listBrands = document.querySelector('.main-left-list-cinema-name');
-listBrands.appendChild(listElements);
 
 // create array store logo of brands
 
@@ -45,13 +43,43 @@ let lotteNames = ['Lotte Cantavil', 'Lotte Cộng Hoà', 'Lotte Gò Vấp', 'Lot
 let megaNames = ['Mega GS Cao Thắng', 'Mega GS Lý Chính Thắng'];
 
 let brandNames = [...betaNames, ...bhdNames, ...cgvNames, ...cineStarNames, ...dcineNames, ...galaxyNames, ...lotteNames, ...megaNames];
+let brandNamesLength = brandNames.length;
 
-let megaBrand = {
-    name: 'lotte',
-    logo: 'image'
-}
 
-// let betaBrands = {
-//     name: 'Beta Quang Trung',
-//     logo: 'https://static.mservice.io/cinema/momo-upload-api-210813104719-637644484394328824.png'
-// };
+for (let i = 0; i < brandNamesLength; i++) {
+    let listElements = document.createElement('li');
+    listElements.setAttribute('class', 'list-brand');
+    listBrands.appendChild(listElements);
+    let logo = document.createElement('img');
+    logo.setAttribute('src', brandLogos[i]);
+    listElements.appendChild(logo);
+    let name = document.createElement('span');
+    name.className = 'brand-name';
+    name.innerHTML = brandNames[i];
+    listElements.appendChild(name);
+    let icon = document.createElement('i');
+    icon.setAttribute('class', 'fa-solid fa-angle-right')
+    listElements.appendChild(icon);
+
+};
+
+let lists = document.querySelectorAll('.list-brand');
+let height = lists[8].offsetHeight;
+const heightOfUl = height * 7;
+let heightLast = height * 4;
+let heightChange = heightOfUl;
+listBrands.style = `height:${heightOfUl}px`;
+
+let showMoreButton = document.querySelector('.main-left-list-cinema-show-more');
+let parentOfButton = document.querySelector('.main-left-list-cinema-button')
+
+showMoreButton.addEventListener('click', () => {
+    if (heightChange <= 2540) {
+        heightChange += heightOfUl;
+        listBrands.style = `height:${heightChange}px`;
+    } else {
+        heightChange = height * brandNamesLength;
+        listBrands.style = `height:${heightChange}px`;
+        parentOfButton.style.display = 'none';
+    }
+})
