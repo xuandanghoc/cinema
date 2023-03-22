@@ -19,7 +19,8 @@ let showListNav = (index) => {
 };
 
 Array.from(listItems).forEach((item, index) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault();
         showListNav(index);
     })
 });

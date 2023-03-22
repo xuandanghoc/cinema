@@ -242,12 +242,16 @@ body li {
 .current-movie-flex {
     width: 100%;
     overflow: hidden;
+    display: flex;
 }
 .current-movie-flex .current-movie-flex-wrapper {
     display: flex;
     gap: 1.2rem;
     width: 100%;
     transition: 0.3s;
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 60px; */
 }
 .current-movie-flex-items .current-movie-flex-items-top .flex-items-image img, 
 .comingsoon-movie-flex-items .comingsoon-movie-flex-items-top .flex-items-image img {
@@ -353,9 +357,6 @@ body li {
  
 /* comingsoon movie */
 
-#comingsoon-movie .comingsoon-movie-flex-items-bottom .comingsoon-movie-flex-items-bottom-title {
-    color: #111;
- }
 .current-movie-flex-items-bottom .current-movie-flex-items-bottom-category {
     color: rgb(163, 151, 151);
 }
@@ -374,12 +375,12 @@ body li {
 .bg-comingsoon-movie .comingsoon-movie-flex .comingsoon-movie-flex-wrapper {
     transition: .3s;
 }
-.comingsoon-movie-flex-items .comingsoon-movie-flex-items-top {
-
-}
 .comingsoon-movie-flex-items-bottom .comingsoon-movie-flex-items-bottom-title {
     text-decoration: none;
     color: #111;
+    display: block;
+    width: 14.5vh;
+    overflow: hidden;
 }
 .comingsoon-movie-flex-items-bottom .comingsoon-movie-flex-items-bottom-category {
     font-size: 13px;
@@ -440,6 +441,9 @@ body li {
     overflow: hidden;
     position: relative;
 }
+.trailer-movie-flex .trailer-movie-flex-wrapper {
+    transition: .2s;
+}
 .trailer-movie-flex-items .trailer-movie-flex-items-top {
     overflow: hidden;
     position: relative;
@@ -492,6 +496,9 @@ body li {
 }
 .calendar-movie-border-top .movie-border-top-location {
     gap: 0.75rem;
+}
+.calendar-movie-wrapper {
+    padding: 3.5rem 0;
 }
 .movie-border-top-location .movie-border-top-location-text {
     font-size: 1rem;
@@ -660,7 +667,9 @@ body li {
 
 
 
-
+.movie-border-top-brand {
+    /* display: none; */
+}
 
 .flex {
     display: flex;

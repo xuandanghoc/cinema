@@ -7,6 +7,7 @@ let movieWrapper = document.querySelector('.current-movie-flex-wrapper');
 let movieLists = document.getElementsByClassName('current-movie-flex-items');
 
 let widthListChange = 0;
+
 let nextSlide = () => {
     let widthOfItem = movieLists[0].offsetWidth;
     const widthOnScreen = widthOfItem * 5 + 19.2 * 5;
@@ -21,6 +22,7 @@ let nextSlide = () => {
         nextElementCurrent.style.display = 'none';
     }
 };
+
 nextElementCurrent.addEventListener('click', () => {
     nextSlide();
 });
@@ -30,9 +32,10 @@ let previousSlide = () => {
     const widthOnScreen = widthOfItem * 5 + 19.2 * 5;
     const widthOnLastMovie = widthOfItem * 3 + 19.2 * 3;
     nextElementCurrent.style.display = 'block';
-    if (widthListChange > 0 && widthListChange <= widthOnScreen) {
+    if (widthListChange <= widthOnScreen) {
         movieWrapper.style = `transform:translateX(${0}px)`;
         previousElementCurrent.style.display = 'none';
+        widthListChange = 0;
         
     } else if (widthListChange > widthOnScreen && widthListChange <= widthOnScreen * 3) {
         widthListChange -=  widthOnScreen;
@@ -52,33 +55,18 @@ let nextElementComing = document.querySelector('.comingsoon-movie-next i');
 let previousElementComing = document.querySelector('.comingsoon-movie-previous i');
 let movieComingWrapper = document.querySelector('.comingsoon-movie-flex-wrapper');
 let movieComingItems = document.getElementsByClassName('comingsoon-movie-flex-items');
-let width = movieComingItems[0].offsetWidth;
-const widthOfWrapper = width * 5 + 19.2 * 5;
-const widthOnLast = width * 4 + 19.2 * 4;
-let widthChange = 0;
 
-let nextSlideMovie = () => {
-    previousElementComing.style.display = 'block';
-    if (widthChange < widthOfWrapper * 2) {
-        widthChange += widthOfWrapper;
-        movieComingWrapper.style = `transform:translateX(${widthChange * (-1)}px)`;
-    } else {
-        console.log('hi');
-        widthChange += widthOnLast; 
-        movieComingWrapper.style = `transform:translateX(${widthChange * (-1)}px)`;
-        nextElementComing.style.display = 'none';
-    }
-};
-nextElementComing.addEventListener('click', () => {
-    nextSlideMovie();
-});
+let widthChange = 0;
 
 let previousSlideMovie = () => {
     nextElementComing.style.display = 'block';
-    if (widthChange > 0 && widthChange <= widthOfWrapper) {
+    let width = movieComingItems[0].offsetWidth;
+    const widthOfWrapper = width * 5 + 19.2 * 5;
+    const widthOnLast = width * 4 + 19.2 * 4;
+    if (widthChange <= widthOfWrapper) {
         movieComingWrapper.style = `transform:translateX(${0}px)`;
         previousElementComing.style.display = 'none';
-        
+        widthChange = 0;
     } else if (widthChange > widthOfWrapper && widthChange <= widthOfWrapper * 2) {
         widthChange -=  widthOfWrapper;
         movieComingWrapper.style = `transform:translateX(${widthChange * (-1)}px)`;
@@ -88,7 +76,100 @@ let previousSlideMovie = () => {
 
     }
 };
+
 previousElementComing.addEventListener('click', () => {
     previousSlideMovie();
+});
+
+let nextSlideMovie = () => {
+    let width = movieComingItems[0].offsetWidth;
+    const widthOfWrapper = width * 5 + 19.2 * 5;
+    const widthOnLast = width * 4 + 19.2 * 4;
+    previousElementComing.style.display = 'block';
+    if (widthChange < widthOfWrapper * 2) {
+        widthChange += widthOfWrapper;
+        movieComingWrapper.style = `transform:translateX(${widthChange * (-1)}px)`;
+    } else {
+        widthChange += widthOnLast; 
+        movieComingWrapper.style = `transform:translateX(${widthChange * (-1)}px)`;
+        nextElementComing.style.display = 'none';
+
+    }
+};
+
+nextElementComing.addEventListener('click', () => {
+    nextSlideMovie();
+});
+
+// trailer movie
+let nextElementTrailer = document.querySelector('.trailer-movie-next i');
+let previousElementTrailer = document.querySelector('.trailer-movie-previous i');
+let trailerElementWrapper = document.querySelector('.trailer-movie-flex-wrapper');
+let trailerItems = document.getElementsByClassName('trailer-movie-flex-items');
+
+let widthChangeOfTrailer = 0;
+let nextSlideTrailer = () => {
+    previousElementTrailer.style.display = 'block'
+    let width = trailerItems[0].offsetWidth;
+    const widthOfWrapper = width * 4 + 19.2 * 4;
+    const widthOnLast = width * 3 + 19.2 * 3;
+    if (widthChangeOfTrailer < widthOfWrapper * 4) {
+        widthChangeOfTrailer += widthOfWrapper;
+        trailerElementWrapper.style = `transform:translateX(${widthChangeOfTrailer * (-1)}px)`;
+    } else {
+        widthChangeOfTrailer += widthOnLast; 
+        trailerElementWrapper.style = `transform:translateX(${widthChangeOfTrailer * (-1)}px)`;
+        nextElementTrailer.style.display = 'none';
+    }
+};
+nextElementTrailer.addEventListener('click', () => {
+    nextSlideTrailer();
+});
+
+let previousSlideTrailer = () => {
+    nextElementTrailer.style.display = 'block'
+    let width = trailerItems[0].offsetWidth;
+    const widthOfWrapper = width * 4 + 19.2 * 4;
+    const widthOnLast = width * 3 + 19.2 * 3;
+    if (widthChangeOfTrailer <= widthOfWrapper) {
+        trailerElementWrapper.style = `transform:translateX(${0}px)`;
+        previousElementTrailer.style.display = 'none';
+        widthChangeOfTrailer = 0;
+    } else if (widthChangeOfTrailer > widthOfWrapper && widthChangeOfTrailer <= widthOfWrapper * 4) {
+        widthChangeOfTrailer -=  widthOfWrapper;
+        trailerElementWrapper.style = `transform:translateX(${widthChangeOfTrailer * (-1)}px)`;
+    } else {
+        widthChangeOfTrailer -= widthOnLast; 
+        trailerElementWrapper.style = `transform:translateX(${widthChangeOfTrailer * (-1)}px)`;
+    }
+}
+
+previousElementTrailer.addEventListener('click', () => {
+    previousSlideTrailer();
+});
+
+
+fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json')
+.then(function(names) {
+    return names.json();
 })
+.then(function(provides) {
+    // let lists = Array.from(provides).map((provide) => {
+    //     console.log(provide[provide['name_with_type']]);
+    // });
+    // console.log(lists);
+    Array.from(provides).flat(1);
+    console.log(provides[1]);
+})
+.catch(function(error) {
+    console.log(error);
+})
+
+
+// console.log(provides['name_with_type'])
+        // return `<li>${provide.name}</li>`
+        // let liElements = lists.join('');
+    // document.querySelector('.list-provide-wrapper').innerHTML = liElements;
+
+
 

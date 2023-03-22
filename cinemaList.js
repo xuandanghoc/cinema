@@ -82,4 +82,19 @@ showMoreButton.addEventListener('click', () => {
         listBrands.style = `height:${heightChange}px`;
         parentOfButton.style.display = 'none';
     }
-})
+});
+
+// search cinema
+
+let searchInputs = document.querySelector('.main-left-search-input');
+searchInputs.addEventListener('input', () => {
+    let inputValue = searchInput.value;
+    for (let i = 0; i < brandNamesLength; i++) {
+    let inputValue = searchInput.value;
+        if (!brandNames[i].toLocaleLowerCase().includes(inputValue.toLowerCase())) {
+            lists[i].style.display = 'none';
+        } else {
+            lists[i].style.display = 'flex';
+        }
+    }
+ })
