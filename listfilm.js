@@ -148,28 +148,28 @@ previousElementTrailer.addEventListener('click', () => {
     previousSlideTrailer();
 });
 
-
+let ulElement = document.querySelector('.list-provide-wrapper');
 fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json')
 .then(function(names) {
     return names.json();
 })
 .then(function(provides) {
-    // let lists = Array.from(provides).map((provide) => {
-    //     console.log(provide[provide['name_with_type']]);
-    // });
-    // console.log(lists);
-    Array.from(provides).flat(1);
-    console.log(provides[1]);
+    let provideLists = Object.values(provides);
+    let names = [];
+    provideLists.map((e) => {
+        names.push(e.name);
+    });
+    names.forEach((name) => {
+        let listElements = document.createElement('li');
+        listElements.className = 'list-provide-items'
+        listElements.innerHTML = name;
+        ulElement.appendChild(listElements);
+    })
 })
 .catch(function(error) {
     console.log(error);
 })
 
-
-// console.log(provides['name_with_type'])
-        // return `<li>${provide.name}</li>`
-        // let liElements = lists.join('');
-    // document.querySelector('.list-provide-wrapper').innerHTML = liElements;
 
 
 

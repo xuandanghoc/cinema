@@ -1,5 +1,4 @@
 
-let listBrands = document.querySelector('.main-left-list-cinema-name');
 
 // create array store logo of brands
 
@@ -44,12 +43,11 @@ let megaNames = ['Mega GS Cao Thắng', 'Mega GS Lý Chính Thắng'];
 
 let brandNames = [...betaNames, ...bhdNames, ...cgvNames, ...cineStarNames, ...dcineNames, ...galaxyNames, ...lotteNames, ...megaNames];
 let brandNamesLength = brandNames.length;
-
+let listBrands = document.querySelector('.main-left-list-cinema-name');
 
 for (let i = 0; i < brandNamesLength; i++) {
     let listElements = document.createElement('li');
     listElements.setAttribute('class', 'list-brand');
-    listBrands.appendChild(listElements);
     let logo = document.createElement('img');
     logo.setAttribute('src', brandLogos[i]);
     listElements.appendChild(logo);
@@ -60,7 +58,7 @@ for (let i = 0; i < brandNamesLength; i++) {
     let icon = document.createElement('i');
     icon.setAttribute('class', 'fa-solid fa-angle-right')
     listElements.appendChild(icon);
-
+    listBrands.appendChild(listElements);
 };
 
 let lists = document.querySelectorAll('.list-brand');
@@ -88,13 +86,40 @@ showMoreButton.addEventListener('click', () => {
 
 let searchInputs = document.querySelector('.main-left-search-input');
 searchInputs.addEventListener('input', () => {
-    let inputValue = searchInput.value;
+    let inputValue = searchInputs.value;
     for (let i = 0; i < brandNamesLength; i++) {
-    let inputValue = searchInput.value;
+    let inputValue = searchInputs.value;
         if (!brandNames[i].toLocaleLowerCase().includes(inputValue.toLowerCase())) {
             lists[i].style.display = 'none';
         } else {
             lists[i].style.display = 'flex';
         }
     }
- })
+ });
+
+ let provideListWrapper = document.querySelector('.provide-lists');
+fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json')
+.then(function(names) {
+    return names.json();
+})
+.then(function(provides) {
+    let provideLists = Object.values(provides);
+    let names = [];
+    provideLists.map((e) => {
+        names.push(e.name);
+    });
+    names.forEach((name) => {
+        let liElements = document.createElement('li');
+        liElements.className = 'list-provide-items';
+        liElements.innerHTML = name;
+        provideListWrapper.appendChild(liElements);
+    })
+})
+.catch(function(error) {
+    console.log(error);
+})
+
+
+
+
+
