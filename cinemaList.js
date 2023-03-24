@@ -44,6 +44,7 @@ let megaNames = ['Mega GS Cao Thắng', 'Mega GS Lý Chính Thắng'];
 let brandNames = [...betaNames, ...bhdNames, ...cgvNames, ...cineStarNames, ...dcineNames, ...galaxyNames, ...lotteNames, ...megaNames];
 let brandNamesLength = brandNames.length;
 let listBrands = document.querySelector('.main-left-list-cinema-name');
+document.querySelector('.movie-border-bottom-main-left').style = `height:{heightOfBrandName}px`;
 
 for (let i = 0; i < brandNamesLength; i++) {
     let listElements = document.createElement('li');
@@ -85,19 +86,25 @@ showMoreButton.addEventListener('click', () => {
 // search cinema
 
 let searchInputs = document.querySelector('.main-left-search-input');
+
+let searchElemnt = (Element, inputValue, index, name) => {
+    if (!Element[index].toLocaleLowerCase().includes(inputValue.toLocaleLowerCase())) {
+        name[index].style.display = 'none';
+        showMoreButton.style.display = 'none';
+    } else {
+        name[index].style.display = 'flex';
+        showMoreButton.style.display = 'inline';
+    }
+};
+
 searchInputs.addEventListener('input', () => {
     let inputValue = searchInputs.value;
     for (let i = 0; i < brandNamesLength; i++) {
-    let inputValue = searchInputs.value;
-        if (!brandNames[i].toLocaleLowerCase().includes(inputValue.toLowerCase())) {
-            lists[i].style.display = 'none';
-        } else {
-            lists[i].style.display = 'flex';
-        }
+        searchElemnt(brandNames, inputValue, i, lists)
     }
  });
 
- let provideListWrapper = document.querySelector('.provide-lists');
+let provideListWrapper = document.querySelector('.list-provide-wrapper');
 fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json')
 .then(function(names) {
     return names.json();
@@ -113,11 +120,43 @@ fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json
         liElements.className = 'list-provide-items';
         liElements.innerHTML = name;
         provideListWrapper.appendChild(liElements);
+        liElements.addEventListener('click', () => {
+            liElements.className += ' active';
+        })
     })
 })
 .catch(function(error) {
     console.log(error);
-})
+});
+
+document.querySelector('.movie-border-top-location-option').addEventListener('click', ( ) => {
+    popupOfProvide.style.display = 'block';
+    document.body.style.cssText = `
+        position: fixed;
+        left: 0;
+        right: 0;
+    `
+});
+
+let closePopup = (popupElement) => {
+    popupElement.style.display = 'none';
+    document.body.style = `position: static`;
+};
+let popupOfProvide = document.querySelector('.popup-fixed-provide');
+
+document.querySelector('.popup-fixed-provide-footer-button').addEventListener('click', () => {
+    closePopup(popupOfProvide);
+});
+
+document.querySelector('.popup-fixed-provide-head i').addEventListener('click', () => {
+    closePopup(popupOfProvide);
+});
+
+
+
+
+
+
 
 
 

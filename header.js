@@ -32,6 +32,8 @@ let hideListNav = () => {
     Array.from(angleDowns).forEach((angle) => {
         angle.className = angle.className.replace(' up', '');
     });
+    popupOfProvide.style.display = 'none';
+    document.body.style = `position: static`;
 };
 
 window.addEventListener('click', () => {

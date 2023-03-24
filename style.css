@@ -494,6 +494,9 @@ body li {
 .calendar-movie-wrapper .calendar-movie-title {
     color: var(--pink);
 }
+.calendar-movie-border .calendar-movie-border-top {
+    padding: 0 0.75rem;
+}
 .calendar-movie-border-top .movie-border-top-location {
     gap: 0.75rem;
 }
@@ -550,12 +553,12 @@ body li {
     height: 100%;
     padding: 5px;
     object-fit: contain;
-
 }
 .movie-border-top-brand .movie-border-top-brand-wrapper {
     display: flex;
     gap: 0.5rem;
-    padding-top: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e5e5;
 }
 .movie-border-top-brand-items .brand-items-title {
     font-size: 12px;
@@ -584,10 +587,12 @@ body li {
     cursor: pointer;
     text-align: center;
 }
-
-.movie-border-bottom-main-left .movie-border-bottom-main-left-wrapper {
+.calendar-movie-border-bottom-main .movie-border-bottom-main-left {
     width: 31.5%;
+}
+.movie-border-bottom-main-left .movie-border-bottom-main-left-wrapper {
     border-right: 1px solid #e5e5e5;
+    width: 100%;
 }
 .main-left-list-cinema-name .list-brand {
     display: flex;
@@ -721,18 +726,18 @@ body li {
 .popup-fixed-provide-body .popup-fixed-provide-body-parent {
     padding: 0 2.5rem;
 }
-.popup-fixed-provide-body-parent .provide-lists {
+.popup-fixed-provide-body-parent .list-provide-wrapper {
     display: grid;
     grid-template-columns: repeat(4,minmax(0,1fr));
     gap: 0.75rem;
 }
-.provide-lists>li {
+.list-provide-wrapper>li {
     padding: 0.7rem 0.75rem;
     font-size: .9375rem;
     color: rgb(84, 78, 78);
     cursor: pointer;
 }
-.provide-lists>li:hover {
+.list-provide-wrapper>li:hover {
     background-color: #f5f5f5;
     border-radius: 6px;
 }
@@ -768,9 +773,14 @@ body li {
     background-color: #cd2885;
 }
 .popup-fixed-provide {
-    /* display: none; */
+    display: none;
 }
 
+.list-provide-wrapper .list-provide-items.active {
+    border: 1px solid #d82d8d;
+    color: #d82d8d;
+    border-radius: 4px;
+}
 
 
 

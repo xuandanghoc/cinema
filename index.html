@@ -1060,7 +1060,7 @@
                     <div class="calendar-movie-border-top">
                         <div class="movie-border-top-location flex">
                             <span class="movie-border-top-location-text">Vị trí</span>
-                            <div class="movie-border-top-location-option flex">
+                            <div class="movie-border-top-location-option flex" onclick="event.stopPropagation()">
                                 <i class="fa-solid fa-location-dot"></i>
                                 <span class="location-option-list">TP.HCM</span>
                                 <i class="fa-sharp fa-solid fa-angle-down"></i>
@@ -1140,7 +1140,7 @@
                             <div class="movie-border-bottom-main-left">
                                 <div class="movie-border-bottom-main-left-wrapper">
                                     <div class="main-left-search flex">
-                                        <input type="text" class="main-left-search-input" placeholder="Tìm tên theo rạp ...">
+                                        <input type="text" class="main-left-search-input" placeholder="Tìm tên theo rạp ..." style="outline: none;">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </div>
                                     <div class="main-left-list-cinema">
@@ -1167,11 +1167,11 @@
                         <div class="provide-parent-search">
                             <span class="provide-parent-search-title">Chọn địa điểm</span>
                             <div class="provide-parent-search-input">
-                                <input type="text" placeholder="Tìm địa điểm ...">
+                                <input type="text" placeholder="Tìm địa điểm ..." style="outline: none;">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
                         </div>
-                        <ul class="provide-lists">
+                        <ul class="list-provide-wrapper">
                         </ul>
                     </div>
                 </div>
