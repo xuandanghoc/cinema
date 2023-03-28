@@ -87,8 +87,8 @@ showMoreButton.addEventListener('click', () => {
 
 let searchInputs = document.querySelector('.main-left-search-input');
 
-let searchElemnt = (Element, inputValue, index, name) => {
-    if (!Element[index].toLocaleLowerCase().includes(inputValue.toLocaleLowerCase())) {
+let searchElement = (Element, inputValue, index, name) => {
+    if (!Element[index].toLowerCase().includes(inputValue.toLocaleLowerCase())) {
         name[index].style.display = 'none';
         showMoreButton.style.display = 'none';
     } else {
@@ -100,7 +100,7 @@ let searchElemnt = (Element, inputValue, index, name) => {
 searchInputs.addEventListener('input', () => {
     let inputValue = searchInputs.value;
     for (let i = 0; i < brandNamesLength; i++) {
-        searchElemnt(brandNames, inputValue, i, lists)
+        searchElement(brandNames, inputValue, i, lists)
     }
  });
 
@@ -115,34 +115,55 @@ fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json
     provideLists.map((e) => {
         names.push(e.name);
     });
+    
     names.forEach((name) => {
         let liElements = document.createElement('li');
         liElements.className = 'list-provide-items';
         liElements.innerHTML = name;
         provideListWrapper.appendChild(liElements);
-        liElements.addEventListener('click', () => {
-            liElements.className += ' active';
+        console.log(liElements.length)
+    });
+    let provideNames = document.querySelectorAll('.list-provide-items');
+    Array.from(provideNames).forEach((provideName) => {
+        provideName.addEventListener('click', () => {
+            Array.from(provideNames).forEach((item) => {
+                item.className = item.className.replace(' active', '');
+            });
+            provideName.className += ' active';
         })
+    });
+
+    let provideInput = document.querySelector('.provide-parent-search-input input');
+    let namesLength = names.length;
+    provideInput.addEventListener('input', () => {
+        let inputText = provideInput.value;
+        for (let i = 0; i < namesLength; i++) {
+            searchElement(names, inputText, i, provideNames);
+        }
     })
 })
 .catch(function(error) {
     console.log(error);
 });
 
+let popupOfProvide = document.querySelector('.popup-fixed-provide');
+
 document.querySelector('.movie-border-top-location-option').addEventListener('click', ( ) => {
-    popupOfProvide.style.display = 'block';
-    document.body.style.cssText = `
+    popupOfProvide.style.cssText = `
         position: fixed;
         left: 0;
         right: 0;
-    `
+        top: 0;
+        bottom: 0;
+        display: block; 
+        background-color: rgba(0,0,0, 0.5   );
+    `;
+
 });
 
 let closePopup = (popupElement) => {
     popupElement.style.display = 'none';
-    document.body.style = `position: static`;
 };
-let popupOfProvide = document.querySelector('.popup-fixed-provide');
 
 document.querySelector('.popup-fixed-provide-footer-button').addEventListener('click', () => {
     closePopup(popupOfProvide);
