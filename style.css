@@ -672,7 +672,6 @@ body li {
 
 /* popup fixed provide */
 .popup-fixed-provide {
-    border-radius: 0.75rem;
     z-index: 100;
     padding: 2.25rem;
     margin: 0 auto;
@@ -703,8 +702,6 @@ body li {
     justify-content: space-between;
     position: relative;
     align-items: center;
-    margin-bottom: 1.5rem;
-
 }
 .provide-parent-search .provide-parent-search-input {
     width: 40%;
@@ -738,6 +735,7 @@ body li {
     grid-template-columns: repeat(4,minmax(0,1fr));
     gap: 0.75rem;
     background-color: #fff;
+    margin: 1.25rem 0;
 }
 .list-provide-wrapper>li {
     padding: 0.75rem 0.85rem;
@@ -759,10 +757,6 @@ body li {
 .popup-fixed-provide .popup-fixed-provide-footer {
     text-align: end;
     padding: 1rem 1.25rem;
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
     z-index: 100;
     background-color: #fff;
     border-top: 1px solid #e5e5e5;

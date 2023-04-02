@@ -148,27 +148,6 @@ previousElementTrailer.addEventListener('click', () => {
     previousSlideTrailer();
 });
 
-let ulElement = document.querySelector('.list-provide-wrapper');
-fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json')
-.then(function(names) {
-    return names.json();
-})
-.then(function(provides) {
-    let provideLists = Object.values(provides);
-    let names = [];
-    provideLists.map((e) => {
-        names.push(e.name);
-    });
-    names.forEach((name) => {
-        let listElements = document.createElement('li');
-        listElements.className = 'list-provide-items'
-        listElements.innerHTML = name;
-        ulElement.appendChild(listElements);
-    })
-})
-.catch(function(error) {
-    console.log(error);
-})
 
 
 

@@ -102,53 +102,54 @@ searchInputs.addEventListener('input', () => {
     for (let i = 0; i < brandNamesLength; i++) {
         searchElement(brandNames, inputValue, i, lists)
     }
- });
+});
 
 let provideListWrapper = document.querySelector('.list-provide-wrapper');
-fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json')
-.then(function(names) {
-    return names.json();
-})
-.then(function(provides) {
-    let provideLists = Object.values(provides);
-    let names = [];
-    provideLists.map((e) => {
-        names.push(e.name);
-    });
-    
-    names.forEach((name) => {
-        let liElements = document.createElement('li');
-        liElements.className = 'list-provide-items';
-        liElements.innerHTML = name;
-        provideListWrapper.appendChild(liElements);
-        console.log(liElements.length)
-    });
-    let provideNames = document.querySelectorAll('.list-provide-items');
-    Array.from(provideNames).forEach((provideName) => {
-        provideName.addEventListener('click', () => {
-            Array.from(provideNames).forEach((item) => {
-                item.className = item.className.replace(' active', '');
-            });
-            provideName.className += ' active';
-        })
-    });
 
-    let provideInput = document.querySelector('.provide-parent-search-input input');
-    let namesLength = names.length;
-    provideInput.addEventListener('input', () => {
-        let inputText = provideInput.value;
-        for (let i = 0; i < namesLength; i++) {
-            searchElement(names, inputText, i, provideNames);
-        }
+fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json')
+    .then(function (names) {
+        return names.json();
     })
-})
-.catch(function(error) {
-    console.log(error);
-});
+    .then(function (provides) {
+        let provideLists = Object.values(provides);
+        let names = [];
+        provideLists.map((e) => {
+            names.push(e.name);
+        });
+
+        names.forEach((name) => {
+            let liElements = document.createElement('li');
+            liElements.className = 'list-provide-items';
+            liElements.innerHTML = name;
+            provideListWrapper.appendChild(liElements);
+        });
+
+        let provideNames = document.querySelectorAll('.list-provide-items');
+        Array.from(provideNames).forEach((provideName) => {
+            provideName.addEventListener('click', () => {
+                Array.from(provideNames).forEach((item) => {
+                    item.className = item.className.replace(' active', '');
+                });
+                provideName.className += ' active';
+            })
+        });
+
+        let provideInput = document.querySelector('.provide-parent-search-input input');
+        let namesLength = names.length;
+        provideInput.addEventListener('input', () => {
+            let inputText = provideInput.value;
+            for (let i = 0; i < namesLength; i++) {
+                searchElement(names, inputText, i, provideNames);
+            }
+        })
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
 
 let popupOfProvide = document.querySelector('.popup-fixed-provide');
 
-document.querySelector('.movie-border-top-location-option').addEventListener('click', ( ) => {
+document.querySelector('.movie-border-top-location-option').addEventListener('click', () => {
     popupOfProvide.style.cssText = `
         position: fixed;
         left: 0;
@@ -156,9 +157,8 @@ document.querySelector('.movie-border-top-location-option').addEventListener('cl
         top: 0;
         bottom: 0;
         display: block; 
-        background-color: rgba(0,0,0, 0.5   );
+        background-color: rgba(0,0,0, 0.5);
     `;
-
 });
 
 let closePopup = (popupElement) => {
@@ -180,6 +180,54 @@ document.querySelector('.popup-fixed-provide-head i').addEventListener('click', 
 
 
 
+// selectedId = 'lvv'
+// let filmList = [
+//     {
+//         placeId: 'lvv',
+//         films: [
+//             {
+//             id: '1',
+//             name: '???'
+//         },
+//         {
+//             id: '2',
+//             name: '???'
+//         }
+//         ]
+//     }
+// ]
+
+// filmList.filter(film =>  )
 
 
 
+
+// Date Javascript
+
+let filmList = [
+    {
+        placeId: 'lvv',
+        namePlace: bhdBrands[2],
+        logo: bhdBrands[0],
+        films: [
+            {
+                id: '1',
+                name: 'Siêu Lừa Gặp Siêu Lầy',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/90579154820471367-HO01WswBGMg0B3quND3mYZxNHN.jpg',
+                time: ['13:10 ~ 15:02', '14:40 ~ 16:32', '18:40 ~ 20:32']
+    }, 
+            {
+                id: '2',
+                name: 'Thanh Gươm Diệt Quỷ: Đường Đến Làng Rèn Gươm',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/2995715139969098-conmemay.jpg',
+                time: ['11:10 ~ 13:00', '12:40 ~ 14:30', '16:40 ~ 18:30']
+    },  
+            {
+                id: '3',
+                name: 'Tri Kỷ',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/3523323972506924-conmemay.jpg',
+                time: ['10:25 ~ 12:55', '12:30 ~ 15:00', '16:45 ~ 19:15', '19:00 ~ 21:30', '21:15 ~ 23:45']
+            }
+]
+    }
+]
