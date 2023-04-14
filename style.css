@@ -637,7 +637,6 @@ body li {
     border-radius: 4px;
     color: rgb(138, 135, 135);
     font-size: .875rem;
-
 }
 .main-left-search i {
     position: absolute;
@@ -668,8 +667,106 @@ body li {
 .main-left-list-cinema .main-left-list-cinema-name {
     overflow: hidden;
 }
+.calendar-movie-border-bottom .calendar-movie-border-bottom-main {
+    display: flex;
+}
 
-
+/* calendar film */
+.calendar-movie-border-bottom-main .movie-border-bottom-main-right {
+    width: calc(100% - 31.5%);
+}
+.movie-border-top-main-right .movie-border-top-main-right-top-logo img {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.movie-border-top-main-right .movie-border-top-main-right-top-logo {
+    width: 5%;
+}
+.movie-border-top-main-right-top .movie-border-top-main-right {
+    display: flex;
+    padding: .625rem 1rem;
+    border-top: 1px solid rgb(0 0 0 / 5%);
+    box-shadow: 0 2px 1px rgb(0 0 0 / 5%);
+    align-items: center;
+}
+.movie-border-top-main-right-map .movie-border-top-main-right-top-name {
+    font-weight: 550;
+    font-size: 15px;
+    color: #262626;
+    cursor: pointer;
+    display: inline-block;
+}
+.movie-border-top-main-right-map .movie-border-top-main-right-top-name:hover {
+    color: #d82d8d;
+}
+.movie-border-top-main-right-address {
+    display: flex;
+    align-items: center;
+}
+.movie-border-top-main-right-address span:first-child {
+    font-size: 13px;
+    color: #737373;
+    min-width: auto;
+    max-width: 92%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: .75rem;
+    text-overflow: ellipsis;
+}
+.movie-border-top-main-right-address span:last-child {
+    font-size: 13px;
+    color: #3B83F6;
+    cursor: pointer;
+}
+.movie-border-top-main-right-address span:last-child:hover {
+    color:#1859c3
+}
+.movie-border-top-main-right .movie-border-top-main-right-map {
+    padding-left: .75rem;
+}
+.movie-border-top-main-right-top .movie-border-top-main-boxday {
+    display: flex;
+    gap: 0.5rem;
+    padding: .75rem 1.25rem;
+    border-bottom: 1px solid rgb(0 0 0 / 5%);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+}
+.movie-border-top-main-boxday-items .movie-border-top-main-boxday-items-weekday span {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #262626;
+}
+.movie-border-top-main-boxday>div {
+    width: 4rem;
+    height: 3.875rem;
+    border: 1px solid #d7d0d0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+.movie-border-top-main-boxday>div:hover {
+    border: 1px solid #403d3d;
+    
+}
+.movie-border-top-main-boxday-items>div {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.movie-border-top-main-boxday-items .movie-border-top-main-boxday-items-weekday {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    height: 60%;
+}
+.movie-border-top-main-boxday-items-day span {
+    font-size: .75rem;
+    color: #A3A3A3;
+}
 /* popup fixed provide */
 .popup-fixed-provide {
     z-index: 100;

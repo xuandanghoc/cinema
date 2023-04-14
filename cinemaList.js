@@ -46,6 +46,8 @@ let brandNamesLength = brandNames.length;
 let listBrands = document.querySelector('.main-left-list-cinema-name');
 document.querySelector('.movie-border-bottom-main-left').style = `height:{heightOfBrandName}px`;
 
+
+// create Li element of brand cinema 
 for (let i = 0; i < brandNamesLength; i++) {
     let listElements = document.createElement('li');
     listElements.setAttribute('class', 'list-brand');
@@ -63,16 +65,16 @@ for (let i = 0; i < brandNamesLength; i++) {
 };
 
 let lists = document.querySelectorAll('.list-brand');
-let height = lists[8].offsetHeight;
-const heightOfUl = height * 7;
+const height = lists[0].clientHeight;
+const heightOfUl = Number(height * 7);
 let heightLast = height * 4;
-let heightChange = heightOfUl;
+let heightChange = heightOfUl;  
 listBrands.style = `height:${heightOfUl}px`;
 
 let showMoreButton = document.querySelector('.main-left-list-cinema-show-more');
-let parentOfButton = document.querySelector('.main-left-list-cinema-button')
+let parentOfButton = document.querySelector('.main-left-list-cinema-button');
 
-showMoreButton.addEventListener('click', () => {
+let changeHeight = () => {
     if (heightChange <= 2540) {
         heightChange += heightOfUl;
         listBrands.style = `height:${heightChange}px`;
@@ -81,6 +83,10 @@ showMoreButton.addEventListener('click', () => {
         listBrands.style = `height:${heightChange}px`;
         parentOfButton.style.display = 'none';
     }
+}
+
+showMoreButton.addEventListener('click', () => {
+    changeHeight();
 });
 
 // search cinema
@@ -106,6 +112,7 @@ searchInputs.addEventListener('input', () => {
 
 let provideListWrapper = document.querySelector('.list-provide-wrapper');
 
+// fetch list of provide from sources
 fetch('https://raw.githubusercontent.com/madnh/hanhchinhvn/master/dist/tree.json')
     .then(function (names) {
         return names.json();
@@ -173,13 +180,6 @@ document.querySelector('.popup-fixed-provide-head i').addEventListener('click', 
     closePopup(popupOfProvide);
 });
 
-
-
-
-
-
-
-
 // selectedId = 'lvv'
 // let filmList = [
 //     {
@@ -199,16 +199,66 @@ document.querySelector('.popup-fixed-provide-head i').addEventListener('click', 
 
 // filmList.filter(film =>  )
 
-
-
-
 // Date Javascript
 
 let filmList = [
     {
-        placeId: 'lvv',
+        placeId: 'quangtrung',
+        namePlace: betaNames,
+        logo: betaBrands,
+        address: 'Số 645 Quang Trung, Phường 11, Quận Gò Vấp, Thành phố Hồ Chí Minh',
+        films: [
+            {
+                id: '4', 
+                name: 'Tri Kỷ',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/3523323972506924-conmemay.jpg',
+                time: ['10:25 ~ 12:55', '21:15 ~ 23:45']
+            }, 
+            {
+                id: '5', 
+                name: 'Biệt Đội Rất Ổn', 
+                banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg', 
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+            }
+        ]
+    },
+    {
+        placeId: '3thang2',
+        namePlaceId: bhdNames[0], 
+        logo: bhdBrands[0],
+        address: 'Tầng 5 | Vincom Plaza, số 3C đường 3 Tháng 2, phường 11, quận 10, thành phố Hồ Chí Minh',
+        films: [
+            {
+                id: '6', 
+                name: 'Biệt Đội Rất Ổn', 
+                banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg', 
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+            }, 
+            {
+                id: '7',
+                name: 'Những Đứa Trẻ Trong Sương',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/4386653747201863-cPE4onInKRxaj3quzprFnSF2bGB.jpg',
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+            }
+        ]
+    }, 
+    {
+        placeId: 'bitexco', 
+        namePlaceId: bhdNames[0],
+        logo: bhdBrands[0],
+        address: 'Tầng 3 & 4 | Tòa nhà tài chính Bitexco, số 2 đường Hải Triều, phường Bến Nghé, quận 1, thành phố Hồ Chí Minh',
+        films: [
+            {
+                id: '8',
+                name: ''
+            }
+        ]
+    }, 
+    {
+        placeId: 'levanviet',
         namePlace: bhdBrands[2],
         logo: bhdBrands[0],
+        address: 'Tầng 4 | Vincom Plaza Lê Văn Việt, số 50 đường Lê Văn Việt, Quận 9, thành phố Hồ Chí Minh',
         films: [
             {
                 id: '1',
@@ -229,5 +279,220 @@ let filmList = [
                 time: ['10:25 ~ 12:55', '12:30 ~ 15:00', '16:45 ~ 19:15', '19:00 ~ 21:30', '21:15 ~ 23:45']
             }
 ]
+    }, 
+    {
+        placeId: 'phamhung',
+        namePlaceId: bhdNames[0],
+        logo: bhdBrands[0],
+        address: 'Tầng 4 | Trung tâm thương mại Satra Phạm Hùng, số C6/27 đường Phạm Hùng, huyện Bình Chánh, TP. Hồ Chí Minh',
+        films: [
+            {
+                id: '1',
+                name: 'Siêu Lừa Gặp Siêu Lầy',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/90579154820471367-HO01WswBGMg0B3quND3mYZxNHN.jpg',
+                time: ['13:10 ~ 15:02', '14:40 ~ 16:32', '18:40 ~ 20:32']
+            }, 
+            {
+                id: '5', 
+                name: 'Biệt Đội Rất Ổn', 
+                banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg', 
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+            }
+        ]
+    }, 
+    {
+        placeId: 'quangtrung',
+        namePlaceId: bhdNames[0],
+        logo: bhdBrands[0],
+        address: 'Tầng B1 & B2 | Vincom Plaza Quang Trung, số 190 đường Quang Trung, quận Gò Vấp, thành phố Hồ Chí Minh',
+        films: [
+            {
+                id: '1',
+                name: 'Siêu Lừa Gặp Siêu Lầy',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/90579154820471367-HO01WswBGMg0B3quND3mYZxNHN.jpg',
+                time: ['13:10 ~ 15:02', '14:40 ~ 16:32', '18:40 ~ 20:32']
+            }, 
+            {
+                id: '9',
+                name: 'Tri Âm: Người Giữ Thời Gian', 
+                banner: 'https://img.cdn.vncdn.io/cinema/img/4185404600682737-1.jpg',
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+            },
+            {
+                id: '10',
+                name: 'Sống Sót', 
+                banner: 'https://img.cdn.vncdn.io/cinema/img/5246938309984726-cTiWR6UZa6kn5fxSAhTvWbjSFYf.jpg',
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+            }
+        ]
+    },
+    {
+        placeId: 'thaodien',
+        namePlaceId: bhdNames[0],
+        logo: bhdBrands[0],
+        address: 'Tầng 5 | Vincom Mega Mall Thảo Điền, số 159 đường Xa Lộ Hà Nội, Quận 2, thành phố Hồ Chí Minh',
+        films: []
     }
 ]
+
+let divElement = document.querySelector('.movie-border-bottom-main-right-wrapper');
+
+let movieRight = document.querySelector('.movie-border-top-main-right-bottom-film');
+// assign key for items in array brandName;
+for (let  i = 0; i < 7; i++) {
+    lists[i].name = filmList[i].placeId;
+    if (lists[i].name === filmList[i].placeId) {
+        lists[i].addEventListener('click', () => {
+            nameCinema = brandNames[i];
+            addressCinema = filmList[i].address; //assign nameBrand, address corresponding key
+
+            let divElementOfFilm = document.createElement('div');
+            divElementOfFilm.className = 'cinema-list-film';
+            
+            let lists = filmList[i].films;
+            let listLenght = lists.length;
+            console.log(lists);
+            // for (let index = 0; index < listLenght; index++) {
+            //     let divElementFilm = document.createElement('div');
+            //     divElementFilm.className = 'item-film';
+            //     let htmlItemFilm = `
+            //     <div class="list-film-item-logo">
+            //     <img src="" alt="">
+            //     </div>
+            //     <div class="list-film-item-show">
+            //         <div class="list-film-item-show-content">
+            //             <div class="list-film-item-show-content-box"></div>
+            //             <div class="list-film-item-show-content-name"></div>
+            //             <div class="list-film-item-show-content-category"></div>
+            //         </div>
+            //         <div class="list-film-item-show-time">
+            //             <div class="list-film-item-show-time-note"></div>
+            //             <div class="list-film-item-show-time-grid">
+
+            //             </div>
+            //         </div>
+            //     </div>
+            //     `
+            //     divElement.innerHTML = htmlItemFilm;
+            // }
+            let currentTime = new Date();
+            let currentDay = currentTime.getDate();
+            let currentWeekDay = currentTime.getDay();
+            const options = { weekday: "long" };
+            let weekDay = [new Intl.DateTimeFormat("en-US", options).format(currentWeekDay)];
+            // let weekday = [currentWeekDay];
+            let day = [currentDay];
+            for (let i = 0; i < 6; i++) {
+                currentDay++;
+                currentWeekDay++;
+                weekDay.push(new Intl.DateTimeFormat("en-US", options).format(currentWeekDay));
+                day.push(currentDay);
+            }
+            let html = `
+    <div class="movie-border-top-main-right-top">
+        <div class="movie-border-top-main-right">
+            <div class="movie-border-top-main-right-top-logo">
+                <img src="${bhdBrands[0]}" alt="">
+            </div>
+            <div class="movie-border-top-main-right-map">
+                <div class="movie-border-top-main-right-top-name">${titleCalendarFilm(nameCinema)}</div>
+                <div class='movie-border-top-main-right-address'>
+                    <span>${addressCinema}</span>
+                    <span>[ Bản đồ ]</span>
+                </div>
+            </div>
+        </div>
+        <div class="movie-border-top-main-boxday">
+            <div class="movie-border-top-main-boxday-items">
+                <div class="movie-border-top-main-boxday-items-weekday">
+                    <span>${day[0]}</span>
+                </div>
+                <div class="movie-border-top-main-boxday-items-day">
+                    <span>${currentTime.getDayName()}</span>
+                </div>
+            </div>
+            <div class="movie-border-top-main-boxday-items">
+                <div class="movie-border-top-main-boxday-items-weekday">
+                    <span>${day[1]}</span>
+                </div>
+                <div class="movie-border-top-main-boxday-items-day">
+                    <span>${weekDay[1]}</span>
+                </div>
+            </div>
+            <div class="movie-border-top-main-boxday-items">
+                <div class="movie-border-top-main-boxday-items-weekday">
+                    <span>${day[2]}</span>
+                </div>
+                <div class="movie-border-top-main-boxday-items-day">
+                    <span>${weekDay[2]}</span>
+                </div>
+            </div>
+            <div class="movie-border-top-main-boxday-items">
+                <div class="movie-border-top-main-boxday-items-weekday">
+                    <span>${day[3]}</span>
+                </div>
+                <div class="movie-border-top-main-boxday-items-day">
+                    <span>${weekDay[3]}</span>
+                </div>
+            </div>
+            <div class="movie-border-top-main-boxday-items">
+                <div class="movie-border-top-main-boxday-items-weekday">
+                    <span>${day[4]}</span>
+                </div>
+                <div class="movie-border-top-main-boxday-items-day">
+                    <span>${weekDay[4]}</span>
+                </div>
+            </div>
+            <div class="movie-border-top-main-boxday-items">
+                <div class="movie-border-top-main-boxday-items-weekday">
+                    <span>${day[5]}</span>
+                </div>
+                <div class="movie-border-top-main-boxday-items-day">
+                    <span>${weekDay[5]}</span>
+                </div>
+            </div>
+            <div class="movie-border-top-main-boxday-items">
+                <div class="movie-border-top-main-boxday-items-weekday">
+                    <span>${day[6]}</span>
+                </div>
+                <div class="movie-border-top-main-boxday-items-day">
+                    <span>${weekDay[6]}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+    `
+    divElement.innerHTML = html;
+        })
+    }
+};
+
+function appendNameCinema() {
+    const text = 'Lịch chiếu phim';
+    function nameBrand(cinemaName) {
+        return `${text} ${cinemaName}`;
+    };
+    return nameBrand;
+}
+
+let titleCalendarFilm = appendNameCinema();
+// create html code
+
+    let nameCinema, addressCinema;
+
+    (function getDayOfWeek() {
+        let dayOfWeek = ['Chủ nhật', 'Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7'];
+        Date.prototype.getDayName = function() {
+            return dayOfWeek[ this.getDay() ];
+        };
+    })();
+    
+    Array.from(filmList).filter((film, index) => {
+        if (lists[index].name == film.placeId) {
+           
+        }
+    })
+    
