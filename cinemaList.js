@@ -203,7 +203,7 @@ document.querySelector('.popup-fixed-provide-head i').addEventListener('click', 
 
 let filmList = [
     {
-        placeId: 'quangtrung',
+        placeId: 'betaquangtrung',
         namePlace: betaNames,
         logo: betaBrands,
         address: 'Số 645 Quang Trung, Phường 11, Quận Gò Vấp, Thành phố Hồ Chí Minh',
@@ -212,13 +212,19 @@ let filmList = [
                 id: '4', 
                 name: 'Tri Kỷ',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/3523323972506924-conmemay.jpg',
-                time: ['10:25 ~ 12:55', '21:15 ~ 23:45']
+                time: ['10:25 ~ 12:55', '21:15 ~ 23:45'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }, 
             {
                 id: '5', 
                 name: 'Biệt Đội Rất Ổn', 
                 banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg', 
-                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }
         ]
     },
@@ -232,13 +238,19 @@ let filmList = [
                 id: '6', 
                 name: 'Biệt Đội Rất Ổn', 
                 banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg', 
-                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }, 
             {
                 id: '7',
                 name: 'Những Đứa Trẻ Trong Sương',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/4386653747201863-cPE4onInKRxaj3quzprFnSF2bGB.jpg',
-                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }
         ]
     }, 
@@ -247,12 +259,7 @@ let filmList = [
         namePlaceId: bhdNames[0],
         logo: bhdBrands[0],
         address: 'Tầng 3 & 4 | Tòa nhà tài chính Bitexco, số 2 đường Hải Triều, phường Bến Nghé, quận 1, thành phố Hồ Chí Minh',
-        films: [
-            {
-                id: '8',
-                name: ''
-            }
-        ]
+        films: []
     }, 
     {
         placeId: 'levanviet',
@@ -264,19 +271,28 @@ let filmList = [
                 id: '1',
                 name: 'Siêu Lừa Gặp Siêu Lầy',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/90579154820471367-HO01WswBGMg0B3quND3mYZxNHN.jpg',
-                time: ['13:10 ~ 15:02', '14:40 ~ 16:32', '18:40 ~ 20:32']
+                time: ['13:10 ~ 15:02', '14:40 ~ 16:32', '18:40 ~ 20:32'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
     }, 
             {
                 id: '2',
                 name: 'Thanh Gươm Diệt Quỷ: Đường Đến Làng Rèn Gươm',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/2995715139969098-conmemay.jpg',
-                time: ['11:10 ~ 13:00', '12:40 ~ 14:30', '16:40 ~ 18:30']
+                time: ['11:10 ~ 13:00', '12:40 ~ 14:30', '16:40 ~ 18:30'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
     },  
             {
                 id: '3',
                 name: 'Tri Kỷ',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/3523323972506924-conmemay.jpg',
-                time: ['10:25 ~ 12:55', '12:30 ~ 15:00', '16:45 ~ 19:15', '19:00 ~ 21:30', '21:15 ~ 23:45']
+                time: ['10:25 ~ 12:55', '12:30 ~ 15:00', '16:45 ~ 19:15', '19:00 ~ 21:30', '21:15 ~ 23:45'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }
 ]
     }, 
@@ -290,13 +306,19 @@ let filmList = [
                 id: '1',
                 name: 'Siêu Lừa Gặp Siêu Lầy',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/90579154820471367-HO01WswBGMg0B3quND3mYZxNHN.jpg',
-                time: ['13:10 ~ 15:02', '14:40 ~ 16:32', '18:40 ~ 20:32']
+                time: ['13:10 ~ 15:02', '14:40 ~ 16:32', '18:40 ~ 20:32'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }, 
             {
                 id: '5', 
                 name: 'Biệt Đội Rất Ổn', 
                 banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg', 
-                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }
         ]
     }, 
@@ -310,19 +332,28 @@ let filmList = [
                 id: '1',
                 name: 'Siêu Lừa Gặp Siêu Lầy',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/90579154820471367-HO01WswBGMg0B3quND3mYZxNHN.jpg',
-                time: ['13:10 ~ 15:02', '14:40 ~ 16:32', '18:40 ~ 20:32']
+                time: ['13:10 ~ 15:02', '14:40 ~ 16:32', '18:40 ~ 20:32'],
+                age: '17+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }, 
             {
                 id: '9',
                 name: 'Tri Âm: Người Giữ Thời Gian', 
                 banner: 'https://img.cdn.vncdn.io/cinema/img/4185404600682737-1.jpg',
-                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
+                age: '18+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             },
             {
                 id: '10',
                 name: 'Sống Sót', 
                 banner: 'https://img.cdn.vncdn.io/cinema/img/5246938309984726-cTiWR6UZa6kn5fxSAhTvWbjSFYf.jpg',
-                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30']
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
+                age: '16+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }
         ]
     },
@@ -343,130 +374,182 @@ for (let  i = 0; i < 7; i++) {
     lists[i].name = filmList[i].placeId;
     if (lists[i].name === filmList[i].placeId) {
         lists[i].addEventListener('click', () => {
+
+            // assign style for listsBrand
+            // Array.from(lists).forEach((element) => {
+            //     element.className = element.className.replace(' active', '');
+            // });
+            // lists[i].className += ' active';
+
+
             nameCinema = brandNames[i];
             addressCinema = filmList[i].address; //assign nameBrand, address corresponding key
 
-            let divElementOfFilm = document.createElement('div');
-            divElementOfFilm.className = 'cinema-list-film';
-            
-            let lists = filmList[i].films;
-            let listLenght = lists.length;
-            console.log(lists);
-            // for (let index = 0; index < listLenght; index++) {
-            //     let divElementFilm = document.createElement('div');
-            //     divElementFilm.className = 'item-film';
-            //     let htmlItemFilm = `
-            //     <div class="list-film-item-logo">
-            //     <img src="" alt="">
-            //     </div>
-            //     <div class="list-film-item-show">
-            //         <div class="list-film-item-show-content">
-            //             <div class="list-film-item-show-content-box"></div>
-            //             <div class="list-film-item-show-content-name"></div>
-            //             <div class="list-film-item-show-content-category"></div>
-            //         </div>
-            //         <div class="list-film-item-show-time">
-            //             <div class="list-film-item-show-time-note"></div>
-            //             <div class="list-film-item-show-time-grid">
-
-            //             </div>
-            //         </div>
-            //     </div>
-            //     `
-            //     divElement.innerHTML = htmlItemFilm;
-            // }
             let currentTime = new Date();
             let currentDay = currentTime.getDate();
-            let currentWeekDay = currentTime.getDay();
-            const options = { weekday: "long" };
-            let weekDay = [new Intl.DateTimeFormat("en-US", options).format(currentWeekDay)];
-            // let weekday = [currentWeekDay];
+            let weekDay = [currentTime];
             let day = [currentDay];
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < 7; i++) {
                 currentDay++;
-                currentWeekDay++;
-                weekDay.push(new Intl.DateTimeFormat("en-US", options).format(currentWeekDay));
                 day.push(currentDay);
+                let a = currentTime.setDate(currentDay);
+                weekDay.push(new Date(a));
             }
+           
             let html = `
-    <div class="movie-border-top-main-right-top">
-        <div class="movie-border-top-main-right">
-            <div class="movie-border-top-main-right-top-logo">
-                <img src="${bhdBrands[0]}" alt="">
-            </div>
-            <div class="movie-border-top-main-right-map">
-                <div class="movie-border-top-main-right-top-name">${titleCalendarFilm(nameCinema)}</div>
-                <div class='movie-border-top-main-right-address'>
-                    <span>${addressCinema}</span>
-                    <span>[ Bản đồ ]</span>
+                <div class="movie-border-top-main-right-top">
+                    <div class="movie-border-top-main-right">
+                        <div class="movie-border-top-main-right-top-logo">
+                            <img src="${filmList[i].logo}" alt="">
+                        </div>
+                        <div class="movie-border-top-main-right-map">
+                            <div class="movie-border-top-main-right-top-name">${titleCalendarFilm(nameCinema)}</div>
+                            <div class='movie-border-top-main-right-address'>
+                                <span>${addressCinema}</span>
+                                <span>[ Bản đồ ]</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie-border-top-main-boxday">
+                        <div class="movie-border-top-main-boxday-items">
+                            <div class="movie-border-top-main-boxday-items-weekday">
+                                <span>${day[0]}</span>
+                            </div>
+                            <div class="movie-border-top-main-boxday-items-day">
+                                <span>${weekDay[0].getDayName()}</span>
+                            </div>
+                        </div>
+                        <div class="movie-border-top-main-boxday-items">
+                            <div class="movie-border-top-main-boxday-items-weekday">
+                                <span>${day[1]}</span>
+                            </div>
+                            <div class="movie-border-top-main-boxday-items-day">
+                                <span>${weekDay[1].getDayName()}</span>
+                            </div>
+                        </div>
+                        <div class="movie-border-top-main-boxday-items">
+                            <div class="movie-border-top-main-boxday-items-weekday">
+                                <span>${day[2]}</span>
+                            </div>
+                            <div class="movie-border-top-main-boxday-items-day">
+                                <span>${weekDay[2].getDayName()}</span>
+                            </div>
+                        </div>
+                        <div class="movie-border-top-main-boxday-items">
+                            <div class="movie-border-top-main-boxday-items-weekday">
+                                <span>${day[3]}</span>
+                            </div>
+                            <div class="movie-border-top-main-boxday-items-day">
+                                <span>${weekDay[3].getDayName()}</span>
+                            </div>
+                        </div>
+                        <div class="movie-border-top-main-boxday-items">
+                            <div class="movie-border-top-main-boxday-items-weekday">
+                                <span>${day[4]}</span>
+                            </div>
+                            <div class="movie-border-top-main-boxday-items-day">
+                                <span>${weekDay[4].getDayName()}</span>
+                            </div>
+                        </div>
+                        <div class="movie-border-top-main-boxday-items">
+                            <div class="movie-border-top-main-boxday-items-weekday">
+                                <span>${day[5]}</span>
+                            </div>
+                            <div class="movie-border-top-main-boxday-items-day">
+                                <span>${weekDay[5].getDayName()}</span>
+                            </div>
+                        </div>
+                        <div class="movie-border-top-main-boxday-items">
+                            <div class="movie-border-top-main-boxday-items-weekday">
+                                <span>${day[6]}</span>
+                            </div>
+                            <div class="movie-border-top-main-boxday-items-day">
+                                <span>${weekDay[6].getDayName()}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="movie-border-top-main-boxday">
-            <div class="movie-border-top-main-boxday-items">
-                <div class="movie-border-top-main-boxday-items-weekday">
-                    <span>${day[0]}</span>
-                </div>
-                <div class="movie-border-top-main-boxday-items-day">
-                    <span>${currentTime.getDayName()}</span>
-                </div>
-            </div>
-            <div class="movie-border-top-main-boxday-items">
-                <div class="movie-border-top-main-boxday-items-weekday">
-                    <span>${day[1]}</span>
-                </div>
-                <div class="movie-border-top-main-boxday-items-day">
-                    <span>${weekDay[1]}</span>
-                </div>
-            </div>
-            <div class="movie-border-top-main-boxday-items">
-                <div class="movie-border-top-main-boxday-items-weekday">
-                    <span>${day[2]}</span>
-                </div>
-                <div class="movie-border-top-main-boxday-items-day">
-                    <span>${weekDay[2]}</span>
-                </div>
-            </div>
-            <div class="movie-border-top-main-boxday-items">
-                <div class="movie-border-top-main-boxday-items-weekday">
-                    <span>${day[3]}</span>
-                </div>
-                <div class="movie-border-top-main-boxday-items-day">
-                    <span>${weekDay[3]}</span>
-                </div>
-            </div>
-            <div class="movie-border-top-main-boxday-items">
-                <div class="movie-border-top-main-boxday-items-weekday">
-                    <span>${day[4]}</span>
-                </div>
-                <div class="movie-border-top-main-boxday-items-day">
-                    <span>${weekDay[4]}</span>
-                </div>
-            </div>
-            <div class="movie-border-top-main-boxday-items">
-                <div class="movie-border-top-main-boxday-items-weekday">
-                    <span>${day[5]}</span>
-                </div>
-                <div class="movie-border-top-main-boxday-items-day">
-                    <span>${weekDay[5]}</span>
-                </div>
-            </div>
-            <div class="movie-border-top-main-boxday-items">
-                <div class="movie-border-top-main-boxday-items-weekday">
-                    <span>${day[6]}</span>
-                </div>
-                <div class="movie-border-top-main-boxday-items-day">
-                    <span>${weekDay[6]}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
+                
+                
 
-    </div>
     `
     divElement.innerHTML = html;
-        })
+
+    let lists = filmList[i].films;
+    let listLength = lists.length;
+   
+   
+    let filmListBottoms = document.createElement('div');
+    filmListBottoms.className = 'movie-border-top-main-right-bottom';
+    // create element parent wrapper elements child
+    
+    for (let index = 0; index < listLength; index++) {
+
+        let newDivElementChild1s = document.createElement('div');
+        newDivElementChild1s.className = 'list-item-film';
+        // create div item with each film
+
+        let listItemFilmChild2s = document.createElement('div');
+        listItemFilmChild2s.className = 'image-film-list'
+        let imageFilms = document.createElement('img');
+        imageFilms.setAttribute('src', filmList[i].films[index].banner)
+        listItemFilmChild2s.appendChild(imageFilms);
+        // create div of image
+        
+        let divElementFilmShowChild2s = document.createElement('div');
+        divElementFilmShowChild2s.className = 'list-film-item-show';
+        // create div element wrapper content of film
+
+        let showContentTopElementChild3s = document.createElement('div');
+        showContentTopElementChild3s.className = 'list-film-item-show-content-top';
+
+        let boxAgeElementChild4s = document.createElement('div');
+        boxAgeElementChild4s.className = 'list-film-item-content-age';
+        boxAgeElementChild4s.innerHTML = filmList[i].films[index].age;
+
+        let nameElementChild4s = document.createElement('div');
+        nameElementChild4s.className = 'list-film-item-content-name';
+        nameElementChild4s.innerHTML = filmList[i].films[index].name;
+
+        let categoryElementChild4s = document.createElement('div');
+        categoryElementChild4s.className = 'list-film-item-content-category';
+        categoryElementChild4s.innerHTML = filmList[i].films[index].category;
+
+        let showContentBottomElementChild3s = document.createElement('div');
+        showContentBottomElementChild3s.className = 'list-film-item-content-bottom';
+
+        let noteElementChild4s = document.createElement('div');
+        noteElementChild4s.className = 'list-film-item-content-note';
+        noteElementChild4s.innerHTML = filmList[i].films[index].note;
+
+        let timeElementChild4s = document.createElement('div');
+        timeElementChild4s.className = 'list-film-item-content-time';
+        let timeofFilmLength = filmList[i].films[index].time.length;
+        for (let x = 0; x < timeofFilmLength; x++) {
+            let timeItems = document.createElement('span');
+            timeItems.innerHTML = filmList[i].films[index].time[x];
+            timeElementChild4s.appendChild(timeItems);
+        }
+
+        showContentTopElementChild3s.appendChild(boxAgeElementChild4s);
+        showContentTopElementChild3s.appendChild(nameElementChild4s);
+        showContentTopElementChild3s.appendChild(categoryElementChild4s);
+        showContentBottomElementChild3s.appendChild(noteElementChild4s);
+        showContentBottomElementChild3s.appendChild(timeElementChild4s);
+
+        divElementFilmShowChild2s.appendChild(showContentTopElementChild3s);
+        divElementFilmShowChild2s.appendChild(showContentBottomElementChild3s);
+        newDivElementChild1s.appendChild(listItemFilmChild2s);
+        newDivElementChild1s.appendChild(divElementFilmShowChild2s);
+
+        filmListBottoms.appendChild(newDivElementChild1s);
+        divElement.appendChild(filmListBottoms);
+
+
+    }
+
+   
+    })
     }
 };
 
