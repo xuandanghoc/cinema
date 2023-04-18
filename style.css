@@ -609,6 +609,9 @@ body li {
     background-color: #fff;
     cursor: pointer;
 }
+.main-left-list-cinema-name .list-brand.active {
+    background-color: rgb(255,240,246);
+}
 .main-left-list-cinema-name .list-brand:hover {
     background-color: rgb(253, 252, 252);
 }
@@ -851,6 +854,20 @@ body li {
 .list-film-item-show .list-film-item-content-bottom {
     padding: 1rem 0;
 }
+.movie-border-bottom-main-right-wrapper .list-film-empty img {
+    display: block;
+    margin: 0 auto;
+}
+.movie-border-bottom-main-right-wrapper .list-film-empty p:nth-child(2) {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 550;
+}
+.movie-border-bottom-main-right-wrapper .list-film-empty p:nth-child(3) {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(167, 154, 154);
+}
 /* popup fixed provide */
 .popup-fixed-provide {
     z-index: 100;
@@ -963,11 +980,6 @@ body li {
     color: #d82d8d;
     border-radius: 4px;
 }
-
-
-
-
-
 
 .movie-border-top-brand {
     /* display: none; */

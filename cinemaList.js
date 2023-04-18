@@ -354,6 +354,15 @@ let filmList = [
                 age: '16+',
                 category: 'Hài,Kinh Dị,Hành Động',
                 note: '2D Phụ đề'
+            },
+            {
+                id: '10',
+                name: 'Sống Sót', 
+                banner: 'https://img.cdn.vncdn.io/cinema/img/5246938309984726-cTiWR6UZa6kn5fxSAhTvWbjSFYf.jpg',
+                time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
+                age: '16+',
+                category: 'Hài,Kinh Dị,Hành Động',
+                note: '2D Phụ đề'
             }
         ]
     },
@@ -376,11 +385,10 @@ for (let  i = 0; i < 7; i++) {
         lists[i].addEventListener('click', () => {
 
             // assign style for listsBrand
-            // Array.from(lists).forEach((element) => {
-            //     element.className = element.className.replace(' active', '');
-            // });
-            // lists[i].className += ' active';
-
+            Array.from(lists).forEach((element) => {
+                element.className = element.className.replace(' active', '');
+            });
+            lists[i].className += ' active';
 
             nameCinema = brandNames[i];
             addressCinema = filmList[i].address; //assign nameBrand, address corresponding key
@@ -469,86 +477,108 @@ for (let  i = 0; i < 7; i++) {
                         </div>
                     </div>
                 </div>
-                
-                
-
     `
+    let boxDayElements = document.querySelectorAll('.movie-border-top-main-boxday-items');
+    Array.from(boxDayElements).forEach((box) => {
+        box.addEventListener('click', () => {
+            Array.from(boxDayElements).forEach((element) => {
+
+            })
+        })
+    })
     divElement.innerHTML = html;
 
-    let lists = filmList[i].films;
-    let listLength = lists.length;
+    let listLength = filmList[i].films.length;
    
    
     let filmListBottoms = document.createElement('div');
     filmListBottoms.className = 'movie-border-top-main-right-bottom';
     // create element parent wrapper elements child
+
+    if (listLength > 0) {
+        for (let index = 0; index < listLength; index++) {
+
+            let newDivElementChild1s = document.createElement('div');
+            newDivElementChild1s.className = 'list-item-film';
+            // create div item with each film
+            
+            let listItemFilmChild2s = document.createElement('div');
+            listItemFilmChild2s.className = 'image-film-list'
+            let imageFilms = document.createElement('img');
+            imageFilms.setAttribute('src', filmList[i].films[index].banner)
+            listItemFilmChild2s.appendChild(imageFilms);
+            // create div of image
+            
+            let divElementFilmShowChild2s = document.createElement('div');
+            divElementFilmShowChild2s.className = 'list-film-item-show';
+            // create div element wrapper content of film
     
-    for (let index = 0; index < listLength; index++) {
-
-        let newDivElementChild1s = document.createElement('div');
-        newDivElementChild1s.className = 'list-item-film';
-        // create div item with each film
-
-        let listItemFilmChild2s = document.createElement('div');
-        listItemFilmChild2s.className = 'image-film-list'
-        let imageFilms = document.createElement('img');
-        imageFilms.setAttribute('src', filmList[i].films[index].banner)
-        listItemFilmChild2s.appendChild(imageFilms);
-        // create div of image
-        
-        let divElementFilmShowChild2s = document.createElement('div');
-        divElementFilmShowChild2s.className = 'list-film-item-show';
-        // create div element wrapper content of film
-
-        let showContentTopElementChild3s = document.createElement('div');
-        showContentTopElementChild3s.className = 'list-film-item-show-content-top';
-
-        let boxAgeElementChild4s = document.createElement('div');
-        boxAgeElementChild4s.className = 'list-film-item-content-age';
-        boxAgeElementChild4s.innerHTML = filmList[i].films[index].age;
-
-        let nameElementChild4s = document.createElement('div');
-        nameElementChild4s.className = 'list-film-item-content-name';
-        nameElementChild4s.innerHTML = filmList[i].films[index].name;
-
-        let categoryElementChild4s = document.createElement('div');
-        categoryElementChild4s.className = 'list-film-item-content-category';
-        categoryElementChild4s.innerHTML = filmList[i].films[index].category;
-
-        let showContentBottomElementChild3s = document.createElement('div');
-        showContentBottomElementChild3s.className = 'list-film-item-content-bottom';
-
-        let noteElementChild4s = document.createElement('div');
-        noteElementChild4s.className = 'list-film-item-content-note';
-        noteElementChild4s.innerHTML = filmList[i].films[index].note;
-
-        let timeElementChild4s = document.createElement('div');
-        timeElementChild4s.className = 'list-film-item-content-time';
-        let timeofFilmLength = filmList[i].films[index].time.length;
-        for (let x = 0; x < timeofFilmLength; x++) {
-            let timeItems = document.createElement('span');
-            timeItems.innerHTML = filmList[i].films[index].time[x];
-            timeElementChild4s.appendChild(timeItems);
+            let showContentTopElementChild3s = document.createElement('div');
+            showContentTopElementChild3s.className = 'list-film-item-show-content-top';
+    
+            let boxAgeElementChild4s = document.createElement('div');
+            boxAgeElementChild4s.className = 'list-film-item-content-age';
+            boxAgeElementChild4s.innerHTML = filmList[i].films[index].age;
+    
+            let nameElementChild4s = document.createElement('div');
+            nameElementChild4s.className = 'list-film-item-content-name';
+            nameElementChild4s.innerHTML = filmList[i].films[index].name;
+    
+            let categoryElementChild4s = document.createElement('div');
+            categoryElementChild4s.className = 'list-film-item-content-category';
+            categoryElementChild4s.innerHTML = filmList[i].films[index].category;
+    
+            let showContentBottomElementChild3s = document.createElement('div');
+            showContentBottomElementChild3s.className = 'list-film-item-content-bottom';
+    
+            let noteElementChild4s = document.createElement('div');
+            noteElementChild4s.className = 'list-film-item-content-note';
+            noteElementChild4s.innerHTML = filmList[i].films[index].note;
+    
+            let timeElementChild4s = document.createElement('div');
+            timeElementChild4s.className = 'list-film-item-content-time';
+            let timeofFilmLength = filmList[i].films[index].time.length;
+    
+            for (let x = 0; x < timeofFilmLength; x++) {
+                let timeItems = document.createElement('span');
+                timeItems.innerHTML = filmList[i].films[index].time[x];
+                timeElementChild4s.appendChild(timeItems);
+            }
+    
+            showContentTopElementChild3s.appendChild(boxAgeElementChild4s);
+            showContentTopElementChild3s.appendChild(nameElementChild4s);
+            showContentTopElementChild3s.appendChild(categoryElementChild4s);
+            showContentBottomElementChild3s.appendChild(noteElementChild4s);
+            showContentBottomElementChild3s.appendChild(timeElementChild4s);
+    
+            divElementFilmShowChild2s.appendChild(showContentTopElementChild3s);
+            divElementFilmShowChild2s.appendChild(showContentBottomElementChild3s);
+            newDivElementChild1s.appendChild(listItemFilmChild2s);
+            newDivElementChild1s.appendChild(divElementFilmShowChild2s);
+    
+            filmListBottoms.appendChild(newDivElementChild1s);
+            divElement.appendChild(filmListBottoms);
         }
+    } else {
+        let emptyElement = document.createElement('div');
+        emptyElement.className = 'list-film-empty';
 
-        showContentTopElementChild3s.appendChild(boxAgeElementChild4s);
-        showContentTopElementChild3s.appendChild(nameElementChild4s);
-        showContentTopElementChild3s.appendChild(categoryElementChild4s);
-        showContentBottomElementChild3s.appendChild(noteElementChild4s);
-        showContentBottomElementChild3s.appendChild(timeElementChild4s);
+        let imageEmpty = document.createElement('img');
+        imageEmpty.setAttribute('src', 'https://static.mservice.io/next-js/_next/static/public/cinema/not-found.svg');
 
-        divElementFilmShowChild2s.appendChild(showContentTopElementChild3s);
-        divElementFilmShowChild2s.appendChild(showContentBottomElementChild3s);
-        newDivElementChild1s.appendChild(listItemFilmChild2s);
-        newDivElementChild1s.appendChild(divElementFilmShowChild2s);
+        let textEmptyBold = document.createElement('p');
+        textEmptyBold.innerHTML = 'Úi, Suất chiếu không tìm thấy.';
 
-        filmListBottoms.appendChild(newDivElementChild1s);
-        divElement.appendChild(filmListBottoms);
-
-
+        let textEmptySolid = document.createElement('p');
+        textEmptySolid.innerHTML = 'Bạn hãy thử tìm ngày khác nhé';
+        
+        emptyElement.appendChild(imageEmpty);
+        emptyElement.appendChild(textEmptyBold);
+        emptyElement.appendChild(textEmptySolid);
+        divElement.appendChild(emptyElement);
     }
-
-   
+    
+    
     })
     }
 };
@@ -563,7 +593,6 @@ function appendNameCinema() {
 
 let titleCalendarFilm = appendNameCinema();
 // create html code
-
     let nameCinema, addressCinema;
 
     (function getDayOfWeek() {
