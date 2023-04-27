@@ -1,3 +1,4 @@
+'use strict';
 let listDrops = document.querySelectorAll('.lists-items-sub');
 let angleDowns = document.querySelectorAll('.fa-angle-down');
 let listItems = document.querySelectorAll('.header-nav-lists-items');

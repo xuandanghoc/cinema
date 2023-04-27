@@ -184,5 +184,45 @@
     .trailer-movie-flex-items .trailer-movie-flex-items-top {
         height: 51px;
     }
- 
+
+
+    /* calendar film */ 
+
+    #calendar-movie .calendar-movie-wrapper {
+        padding-top: 2rem;
+    }
+    .calendar-movie-wrapper .calendar-movie-border {
+        border: none;
+    }
+    .calendar-movie-wrapper .calendar-movie-title {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+    .calendar-movie-border-top .movie-border-top-brand {
+        display: none;
+    }
+    .movie-border-top-location .movie-border-top-location-text {
+        display: none;
+    }
+
+    .popup-fixed-provide {
+        margin-top: 1.25rem;
+        padding: 0;
+    }
+    .popup-fixed-provide .popup-fixed-provide-wrapper {
+        width: 100%;
+    }
+    .popup-fixed-provide-body .popup-fixed-provide-body-parent {
+        padding: 0 1rem;
+    }
+    .list-provide-wrapper>li {
+        width: auto;
+        display: inline-block;
+        padding: 0.66rem 0.85rem;
+    }
+    .popup-fixed-provide-body-parent .list-provide-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.25rem
+    }
 }
+

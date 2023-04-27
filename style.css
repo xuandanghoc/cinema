@@ -609,6 +609,14 @@ body li {
     background-color: #fff;
     cursor: pointer;
 }
+
+.movie-border-bottom-main-left-wrapper .main-left-list-cinema {
+    height: 433px;
+    overflow: auto;
+}
+.main-left-list-cinema .main-left-list-cinema-name {
+    height: 364px;
+}
 .main-left-list-cinema-name .list-brand.active {
     background-color: rgb(255,240,246);
 }
@@ -670,7 +678,7 @@ body li {
 }
 .main-left-list-cinema .main-left-list-cinema-button {
     text-align: center;
-    padding: 1.875rem 0;
+    padding: 1.25rem 0;
 }
 .main-left-list-cinema .main-left-list-cinema-name {
     overflow: hidden;
@@ -777,6 +785,19 @@ body li {
     color: #A3A3A3;
 }
 
+.movie-border-top-main-boxday-items.actives {
+    border: 1px solid #d82d8d;
+}
+.movie-border-top-main-boxday-items .movie-border-top-main-boxday-items-weekday.addBgColor {
+    background-color: #d82d8d;
+    border-radius: 0;
+}
+.movie-border-top-main-boxday-items-weekday .date-item.addWhite {
+    color: #fff;
+}
+.movie-border-top-main-boxday-items-day .day-item.addPink {
+    color: #d82d8d;
+}
 /* film list  */
 .movie-border-bottom-main-right-wrapper .movie-border-top-main-right-bottom {
     max-height: 350px;
@@ -786,7 +807,6 @@ body li {
     display: flex;  
     padding: 1rem;
     gap: 1rem;
-   
 }
 .movie-border-top-main-right-bottom .list-item-film:not(:last-child) {
     border-bottom: 1px solid rgb(0 0 0 / 5%);
@@ -854,6 +874,9 @@ body li {
 .list-film-item-show .list-film-item-content-bottom {
     padding: 1rem 0;
 }
+.movie-border-bottom-main-right-wrapper .list-film-empty {
+    padding: 20px 0;    
+}
 .movie-border-bottom-main-right-wrapper .list-film-empty img {
     display: block;
     margin: 0 auto;
@@ -862,11 +885,30 @@ body li {
     text-align: center;
     font-size: 1.125rem;
     font-weight: 550;
+    margin-top: 0.75rem;
 }
 .movie-border-bottom-main-right-wrapper .list-film-empty p:nth-child(3) {
     text-align: center;
     font-size: 14px;
     color: rgb(167, 154, 154);
+    margin-top: 0.5rem;
+}
+
+/* calendar button  */
+
+.calendar-movie-wrapper .calendar-movie-button {
+    text-align: center;
+    margin-top: 2rem;
+}
+.calendar-movie-button .calendar-movie-button-more .calendar-movie-button-see-all {
+    font-size: 1rem;
+    padding: .75rem 1.35rem;
+    color: #fff;
+    font-weight: 550;
+    background-color: #cd2885;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 /* popup fixed provide */
 .popup-fixed-provide {
@@ -1000,6 +1042,15 @@ body li {
     gap: 1.2rem;
     width: 100%;
 }
+
+
+
+
+/* remove scroll event */
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 
 
 

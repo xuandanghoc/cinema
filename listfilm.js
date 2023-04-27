@@ -1,3 +1,5 @@
+'use strict';
+
 let nextElementCurrent = document.querySelector('.current-movie-next i');
 let previousElementCurrent = document.querySelector('.current-movie-previous i');
 
