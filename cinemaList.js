@@ -52,9 +52,14 @@ document.querySelector('.movie-border-bottom-main-left').style = `height:{height
 for (let i = 0; i < brandNamesLength; i++) {
     let listElements = document.createElement('li');
     listElements.setAttribute('class', 'list-brand');
-    let logo = document.createElement('img');
-    logo.setAttribute('src', brandLogos[i]);
-    listElements.appendChild(logo);
+    // let logo = document.createElement('img');
+    // logo.setAttribute('src', brandLogos[i]);
+    // logo.style.minWidth = '36px';
+    // logo.style.minHeight = '36px';
+
+    listElements.insertAdjacentHTML('beforeend', `<img src="${brandLogos[i]}" />`);
+
+    // listElements.appendChild(logo);
     let name = document.createElement('span');
     name.className = 'brand-name';
     name.innerHTML = brandNames[i];
@@ -66,18 +71,20 @@ for (let i = 0; i < brandNamesLength; i++) {
 };
 
 let lists = document.querySelectorAll('.list-brand');
+
 const height = lists[0].clientHeight;
+
 const heightOfUl = Number(height * 7);
 let heightLast = lists[0].clientHeight * 4;
-let heightChange = heightOfUl;  
-// listBrands.style = `height:${heightOfUl}px`;
+let heightChange = heightOfUl;
+listBrands.style = `height:${heightOfUl + 6}px`;
 
 let showMoreButton = document.querySelector('.main-left-list-cinema-show-more');
 let parentOfButton = document.querySelector('.main-left-list-cinema-button');
 
 let changeHeight = () => {
     if (heightChange <= 2540) {
-        heightChange += heightOfUl;
+        heightChange += (heightOfUl + 8);
         listBrands.style = `height:${heightChange}px`;
     } else {
         heightChange = height * brandNamesLength;
@@ -213,18 +220,18 @@ let filmList = [
         address: 'Số 645 Quang Trung, Phường 11, Quận Gò Vấp, Thành phố Hồ Chí Minh',
         films: [
             {
-                id: '4', 
+                id: '4',
                 name: 'Tri Kỷ',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/3523323972506924-conmemay.jpg',
                 time: ['10:25 ~ 12:55', '21:15 ~ 23:45'],
                 age: '18+',
                 category: 'Hài,Kinh Dị,Hành Động',
                 note: '2D Phụ đề'
-            }, 
+            },
             {
-                id: '5', 
-                name: 'Biệt Đội Rất Ổn', 
-                banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg', 
+                id: '5',
+                name: 'Biệt Đội Rất Ổn',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg',
                 time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
                 age: '18+',
                 category: 'Hài,Kinh Dị,Hành Động',
@@ -234,19 +241,19 @@ let filmList = [
     },
     {
         placeId: '3thang2',
-        namePlaceId: bhdNames[0], 
+        namePlaceId: bhdNames[0],
         logo: bhdBrands[0],
         address: 'Tầng 5 | Vincom Plaza, số 3C đường 3 Tháng 2, phường 11, quận 10, thành phố Hồ Chí Minh',
         films: [
             {
-                id: '6', 
-                name: 'Biệt Đội Rất Ổn', 
-                banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg', 
+                id: '6',
+                name: 'Biệt Đội Rất Ổn',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg',
                 time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
                 age: '18+',
                 category: 'Hài,Kinh Dị,Hành Động',
                 note: '2D Phụ đề'
-            }, 
+            },
             {
                 id: '7',
                 name: 'Những Đứa Trẻ Trong Sương',
@@ -257,14 +264,14 @@ let filmList = [
                 note: '2D Phụ đề'
             }
         ]
-    }, 
+    },
     {
-        placeId: 'bitexco', 
+        placeId: 'bitexco',
         namePlaceId: bhdNames[0],
         logo: bhdBrands[0],
         address: 'Tầng 3 & 4 | Tòa nhà tài chính Bitexco, số 2 đường Hải Triều, phường Bến Nghé, quận 1, thành phố Hồ Chí Minh',
         films: []
-    }, 
+    },
     {
         placeId: 'levanviet',
         namePlace: bhdBrands[2],
@@ -279,7 +286,7 @@ let filmList = [
                 age: '18+',
                 category: 'Hài,Kinh Dị,Hành Động',
                 note: '2D Phụ đề'
-    }, 
+            },
             {
                 id: '2',
                 name: 'Thanh Gươm Diệt Quỷ: Đường Đến Làng Rèn Gươm',
@@ -288,7 +295,7 @@ let filmList = [
                 age: '18+',
                 category: 'Hài,Kinh Dị,Hành Động',
                 note: '2D Phụ đề'
-    },  
+            },
             {
                 id: '3',
                 name: 'Tri Kỷ',
@@ -298,8 +305,8 @@ let filmList = [
                 category: 'Hài,Kinh Dị,Hành Động',
                 note: '2D Phụ đề'
             }
-]
-    }, 
+        ]
+    },
     {
         placeId: 'phamhung',
         namePlaceId: bhdNames[0],
@@ -314,18 +321,18 @@ let filmList = [
                 age: '18+',
                 category: 'Hài,Kinh Dị,Hành Động',
                 note: '2D Phụ đề'
-            }, 
+            },
             {
-                id: '5', 
-                name: 'Biệt Đội Rất Ổn', 
-                banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg', 
+                id: '5',
+                name: 'Biệt Đội Rất Ổn',
+                banner: 'https://img.cdn.vncdn.io/cinema/img/4183373847735027-1.jpg',
                 time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
                 age: '18+',
                 category: 'Hài,Kinh Dị,Hành Động',
                 note: '2D Phụ đề'
             }
         ]
-    }, 
+    },
     {
         placeId: 'quangtrung',
         namePlaceId: bhdNames[0],
@@ -340,10 +347,10 @@ let filmList = [
                 age: '17+',
                 category: 'Hài,Kinh Dị,Hành Động',
                 note: '2D Phụ đề'
-            }, 
+            },
             {
                 id: '9',
-                name: 'Tri Âm: Người Giữ Thời Gian', 
+                name: 'Tri Âm: Người Giữ Thời Gian',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/4185404600682737-1.jpg',
                 time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
                 age: '18+',
@@ -352,7 +359,7 @@ let filmList = [
             },
             {
                 id: '10',
-                name: 'Sống Sót', 
+                name: 'Sống Sót',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/5246938309984726-cTiWR6UZa6kn5fxSAhTvWbjSFYf.jpg',
                 time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
                 age: '16+',
@@ -361,7 +368,7 @@ let filmList = [
             },
             {
                 id: '10',
-                name: 'Sống Sót', 
+                name: 'Sống Sót',
                 banner: 'https://img.cdn.vncdn.io/cinema/img/5246938309984726-cTiWR6UZa6kn5fxSAhTvWbjSFYf.jpg',
                 time: ['22:30 ~ 00:21', '23:00 ~ 00:51', '23:30 ~ 01:30'],
                 age: '16+',
@@ -487,8 +494,8 @@ let selectCinema = (i) => {         /* function select list film of cinema */
         </div>
     `
 
-   
-   
+
+
     divElement.innerHTML = html;
 
     let listLength = filmList[i].films.length;
@@ -496,7 +503,7 @@ let selectCinema = (i) => {         /* function select list film of cinema */
     let filmListBottoms = document.createElement('div');
     filmListBottoms.className = 'movie-border-top-main-right-bottom';
     // create element parent wrapper elements child
-    
+
 
     if (listLength > 0) {
         for (let index = 0; index < listLength; index++) {
@@ -515,78 +522,78 @@ let selectCinema = (i) => {         /* function select list film of cinema */
             let divElementFilmShowChild2s = document.createElement('div');
             divElementFilmShowChild2s.className = 'list-film-item-show';
             // create div element wrapper content of film
-        
+
             let showContentTopElementChild3s = document.createElement('div');
             showContentTopElementChild3s.className = 'list-film-item-show-content-top';
-        
+
             let boxAgeElementChild4s = document.createElement('div');
             boxAgeElementChild4s.className = 'list-film-item-content-age';
             boxAgeElementChild4s.innerHTML = filmList[i].films[index].age;
-        
+
             let nameElementChild4s = document.createElement('div');
             nameElementChild4s.className = 'list-film-item-content-name';
             nameElementChild4s.innerHTML = filmList[i].films[index].name;
-        
+
             let categoryElementChild4s = document.createElement('div');
             categoryElementChild4s.className = 'list-film-item-content-category';
             categoryElementChild4s.innerHTML = filmList[i].films[index].category;
-        
+
             let showContentBottomElementChild3s = document.createElement('div');
             showContentBottomElementChild3s.className = 'list-film-item-content-bottom';
-        
+
             let noteElementChild4s = document.createElement('div');
             noteElementChild4s.className = 'list-film-item-content-note';
             noteElementChild4s.innerHTML = filmList[i].films[index].note;
-        
+
             let timeElementChild4s = document.createElement('div');
             timeElementChild4s.className = 'list-film-item-content-time';
             let timeofFilmLength = filmList[i].films[index].time.length;
-        
+
             for (let x = 0; x < timeofFilmLength; x++) {
                 let timeItems = document.createElement('span');
                 timeItems.innerHTML = filmList[i].films[index].time[x];
                 timeElementChild4s.appendChild(timeItems);
             }
-        
+
             showContentTopElementChild3s.appendChild(boxAgeElementChild4s);
             showContentTopElementChild3s.appendChild(nameElementChild4s);
             showContentTopElementChild3s.appendChild(categoryElementChild4s);
             showContentBottomElementChild3s.appendChild(noteElementChild4s);
             showContentBottomElementChild3s.appendChild(timeElementChild4s);
-        
+
             divElementFilmShowChild2s.appendChild(showContentTopElementChild3s);
             divElementFilmShowChild2s.appendChild(showContentBottomElementChild3s);
             newDivElementChild1s.appendChild(listItemFilmChild2s);
             newDivElementChild1s.appendChild(divElementFilmShowChild2s);
-        
+
             filmListBottoms.appendChild(newDivElementChild1s);
             divElement.appendChild(filmListBottoms);
         }
-            } else {
-                let emptyElement = document.createElement('div');
-                emptyElement.className = 'list-film-empty';
-            
-                let imageEmpty = document.createElement('img');
-                imageEmpty.setAttribute('src', 'https://static.mservice.io/next-js/_next/static/public/cinema/not-found.svg');
-            
-                let textEmptyBold = document.createElement('p');
-                textEmptyBold.innerHTML = 'Úi, Suất chiếu không tìm thấy.';
-            
-                let textEmptySolid = document.createElement('p');
-                textEmptySolid.innerHTML = 'Bạn hãy thử tìm ngày khác nhé';
+    } else {
+        let emptyElement = document.createElement('div');
+        emptyElement.className = 'list-film-empty';
 
-                emptyElement.appendChild(imageEmpty);
-                emptyElement.appendChild(textEmptyBold);
-                emptyElement.appendChild(textEmptySolid);
-                divElement.appendChild(emptyElement);
-            }
-        }
+        let imageEmpty = document.createElement('img');
+        imageEmpty.setAttribute('src', 'https://static.mservice.io/next-js/_next/static/public/cinema/not-found.svg');
+
+        let textEmptyBold = document.createElement('p');
+        textEmptyBold.innerHTML = 'Úi, Suất chiếu không tìm thấy.';
+
+        let textEmptySolid = document.createElement('p');
+        textEmptySolid.innerHTML = 'Bạn hãy thử tìm ngày khác nhé';
+
+        emptyElement.appendChild(imageEmpty);
+        emptyElement.appendChild(textEmptyBold);
+        emptyElement.appendChild(textEmptySolid);
+        divElement.appendChild(emptyElement);
+    }
+}
 
 selectCinema(0);  /* show list film of cinema Quang Trung */
-lists[0].className += ' active';  
+lists[0].className += ' active';
 
 
-for (let  i = 0; i < 7; i++) {
+for (let i = 0; i < 7; i++) {
     lists[i].name = filmList[i].placeId;
     if (lists[i].name === filmList[i].placeId) {
         lists[i].addEventListener('click', () => {  /* assign event when click cinema name*/
@@ -594,20 +601,20 @@ for (let  i = 0; i < 7; i++) {
                 element.className = element.className.replace(' active', ''); /* assign style for listsBrand*/
             })
             lists[i].className += ' active';
-           
+
             selectCinema(i);
-            })
-           
-        }
-    };
+        })
+
+    }
+};
 
 
-    let boxDayElements = document.querySelectorAll('.movie-border-top-main-boxday-items');
+let boxDayElements = document.querySelectorAll('.movie-border-top-main-boxday-items');
 let boxDayDates = document.querySelectorAll('.movie-border-top-main-boxday-items-weekday .date-item');
 let boxDayDateBorders = document.querySelectorAll('.movie-border-top-main-boxday-items-weekday');
 let boxDayDays = document.querySelectorAll('.movie-border-top-main-boxday-items-day .day-item');
 
-    Array.from(boxDayElements).forEach((box, index) => {       /* assign event when click boxDay */
+Array.from(boxDayElements).forEach((box, index) => {       /* assign event when click boxDay */
     box.addEventListener('click', () => {
         Array.from(boxDayElements).forEach((element) => {
         })
@@ -616,8 +623,8 @@ let boxDayDays = document.querySelectorAll('.movie-border-top-main-boxday-items-
         boxDayDateBorders[index].className += ' addBgColor';
         boxDayDays[index].className += ' addPink';
         console.log('hi')
-        })
-    });
+    })
+});
 
 
     // (function getDayOfWeek() {
@@ -625,5 +632,5 @@ let boxDayDays = document.querySelectorAll('.movie-border-top-main-boxday-items-
     //         return dayOfWeek[this];
     //     };
     // })();
-    
-    
+
+

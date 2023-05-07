@@ -615,7 +615,7 @@ body li {
     overflow: auto;
 }
 .main-left-list-cinema .main-left-list-cinema-name {
-    height: 364px;
+    /* height: 364px; */
 }
 .main-left-list-cinema-name .list-brand.active {
     background-color: rgb(255,240,246);
@@ -625,6 +625,7 @@ body li {
 }
 .main-left-list-cinema-name .list-brand img {
     width: 11%;
+    height: 2.25rem;
     padding: 1px;
     border: 1px solid #e5e5e5;
     object-fit: contain;
@@ -1051,6 +1052,99 @@ body li {
     height: 100%;
     overflow: hidden;
   }
+
+
+
+/* comment */
+#comment-viewer .comment-viewer-wrapper {
+    padding: 0 2rem;
+}
+
+.comment-viewer-wrapper .comment-viewer-title h1 {
+    text-align: center;
+    font-size: 1.875rem;
+    color: #d82d8d;
+    line-height: 2rem;
+}
+.comment-viewer-wrapper .comment-item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.block-grid-comment a {
+    text-decoration: none;
+}
+.block-grid-comment .block-grid-comment-bg-image {
+    width: 100%;
+    height: 12.25rem;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: 100% 12.25rem;
+    border-radius: .85rem .85rem 0 0;
+}
+.block-grid-comment .block-grid-comment-bg-image {
+    position: relative;
+}
+.block-grid-comment-bg-image .block-grid-comment-bg-image-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.block-grid-comment-bg-image-icon .block-grid-comment-bg-image-icon-play i {
+    font-size: 1.3rem;
+    color: #fff;
+    border-radius: 50%;
+    padding: 8px 11px;
+    border: 1px solid #fff;
+    transition: .3s;
+}
+.block-grid-comment-bg-image-icon .block-grid-comment-bg-image-icon-play i:hover {
+    scale: 1.1;
+}
+.block-grid-comment-bg-image .block-grid-comment-bg-image-film {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-weight: 550;
+    padding: 0.75rem;
+}
+.block-grid-comment-bg-image-film .bg-image-film-name {
+    font-size: 0.875rem;
+}
+.block-grid-comment-bg-image-film .bg-image-film-rate {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    gap: 0.85rem;
+    margin-top: 4px;
+}
+.bg-image-film-rate .bg-image-film-rate-percent {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.bg-image-film-rate-percent img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.bg-image-film-rate .bg-image-film-rate-amount {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+}
+.bg-image-film-rate .bg-image-film-rate-amount i {
+    font-size: 1rem;
+    color: rgb(236, 229, 229);
+}
+.bg-image-film-rate .bg-image-film-rate-amount:hover i {
+    color: #fff;
+}
+.bg-image-film-rate .bg-image-film-rate-amount span {
+    color: #fff;
+}
+
 
 
 
