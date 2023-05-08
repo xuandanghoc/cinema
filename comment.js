@@ -180,8 +180,43 @@ for (let i = 0; i < commentFilmsLength; i++) {
             </div>
         </div>
         <div class="block-grid-comment-content">
-            <div class="block-grid-text" >
+            <div class="block-grid-wrapper" >
+                <div class="block-grid-user">
+                    <div class="block-grid-user-container">
+                        <div class="block-grid-user-avt-left">
+                            <img class="avt-user" src="${commentFilms[i].users.avt[0]}" alt="avt">
+                        </div>
+                        <div class="block-grid-user-comment-right">
+                            <div class="user-comment-right-information">
+                                <div class="user-comment-right-information-top">
+                                    <span>${commentFilms[i].users.fullName[0]}</span>
+                                    <span>${commentFilms[i].users.date}</span>
+                                </div>
+                                <p class="user-comment-right-information-bottom-pink">Đã mua vé trên MoMo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="user-comment-right-content">${commentFilms[i].users.comment[0]}</p>
+                </div>
+                <div class="block-grid--user">
+                <div class="block-grid-user-container">
+                <div class="block-grid-user-avt-left">
+                    <img class="avt-user" src="${commentFilms[i].users.avt[1]}" alt="avt">
+                </div>
+                <div class="block-grid-user-comment-right">
+                    <div class="user-comment-right-information">
+                        <div class="user-comment-right-information-top">
+                            <span>${commentFilms[i].users.fullName[1]}</span>
+                            <span>${commentFilms[i].users.date}</span>
+                        </div>
+                        <p class="user-comment-right-information-bottom-pink">Đã mua vé trên MoMo</p>
+                    </div>
+                </div>
             </div>
+            <p class="user-comment-right-content">${commentFilms[i].users.comment[1]}</p>
+                </div>
+            </div
+        </div>
             <a href="" class="see-them">
                 <span>Xem thêm</span>
                 <i class="fa-solid fa-arrow-right"></i>
@@ -200,7 +235,6 @@ for (let i = 0; i < commentFilmsLength; i++) {
                 }
             }
     }
-
 }
 
 
