@@ -51,7 +51,7 @@ let commentFilms = [
             name: 'Chuyện Xóm Tui: Con Nhót Mót Chồng',
             percent: '70%',
             amountComment: '2K',
-            imageUrl:'https://traffic-edge10.cdn.vncdn.io/cinema/img/1879189178748444-maxresdefault%20(4).jpg'
+            imageUrl: 'https://img.cdn.vncdn.io/cinema/img/6704916054765301-unT5IUqiZgqcGyjcOMxomdxQOMj.jpg'
         },
         users: {
             fullName: ['Nguyễn Hoàng Thuận', 'Truong Nhat Huong Giang'],
@@ -66,7 +66,8 @@ let commentFilms = [
             name: 'Tình Người Duyên Ma Ngoại Truyện',
             percent: '70%',
             amountComment: '2K',
-            imageUrl:'https://img.cdn.vncdn.io/cinema/img/8550546220461708-maxresdefault%20(2).jpg'
+            imageUrl: 'https://img.cdn.vncdn.io/cinema/img/6704916054765301-unT5IUqiZgqcGyjcOMxomdxQOMj.jpg'
+
         },
         users: {
             fullName: ['Nguyễn Hoàng Thuận', 'Truong Nhat Huong Giang'],
@@ -225,16 +226,27 @@ for (let i = 0; i < commentFilmsLength; i++) {
     `
     blockGridComment.innerHTML = html;
     commentGridWrapper.appendChild(blockGridComment);
-
-    let commentBlock = document.querySelectorAll('.block-grid-text');
-        for (let i = 0; i < commentFilmsLength; i++) {
-            if (commentFilms[i].users.fullName.length > 0) {
-                for (let index = 0; index < commentFilms[i].users.fullName.length; index++) {
-                    let comments = document.createElement('div');
-                    // commentBlock.appendChild(comments);
-                }
-            }
-    }
 }
+let commentGrid = document.querySelector('.comment-item-grid');
+let commentItems = document.querySelectorAll('.block-grid-comment');
+let commentIemsHeight = commentItems[0].clientHeight;
+let commentIemsHeightChange = commentIemsHeight;
+commentGrid.style = `height:${commentIemsHeight}px`;
+
+let commentbutton = document.querySelector('.comment-movie-button-wrapper');
+
+let changeHeightcomment = () => {
+    if (commentIemsHeightChange < commentIemsHeight * 3 + 48) {
+        commentIemsHeightChange+= commentIemsHeight + 24;
+        commentGrid.style = `height:${commentIemsHeightChange}px`;
+        } 
+    }
+
+
+commentbutton.addEventListener('click', () => {
+    changeHeightcomment();
+})
+
+
 
 
