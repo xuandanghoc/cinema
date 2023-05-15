@@ -627,10 +627,5 @@ Array.from(boxDayElements).forEach((box, index) => {       /* assign event when 
 });
 
 
-    // (function getDayOfWeek() {
-    //     Date.prototype.getDayName = function() {
-    //         return dayOfWeek[this];
-    //     };
-    // })();
 
 
