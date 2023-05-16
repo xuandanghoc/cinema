@@ -1,4 +1,4 @@
-let newFirstLists = [
+let hotFilmFirstLists = [
     {
         id: 1,
         image: 'https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220316121128-637830294882378239.jpg',
@@ -147,21 +147,76 @@ let hotfilms = [
         view: '6.2K lượt xem'
     }
 ]
-let newsWrapper = document.querySelector('.news-cinema-wrapper-content')
-for (let i = 0; i < newFirstLists.length; i++) {
-    let newsItems = document.createElement('div');
-    newsItems.className = 'news-list-item';
-    let htmlNews = `
-        <div class="news-list-item-image">
-            <img src="${newFirstLists[i].image}" alt="This is a image">
+let hotFilmWrapper = document.querySelector('.hotfilm-cinema-wrapper-content');
+
+let hotFilmItems1Wrapper = document.createElement('div');
+hotFilmItems1Wrapper.className = 'hotfilm-list-1';
+
+
+for (let i = 0; i < hotFilmFirstLists.length; i++) {
+    let hotFilmItems = document.createElement('div');
+    hotFilmItems.className = 'hotfilm-list-item';
+    let htmlHotFilm = `
+        <div class="hotfilm-list-item-image">
+            <img src="${hotFilmFirstLists[i].image}" alt="This is a image">
         </div>
-        <div class="news-list-item-inform">
-            <div class="news-list-item-inform-text">${newFirstLists[i].title}</div>
-            <div class="news-list-item-inform-day">${newFirstLists[i].view}</div>
+        <div class="hotfilm-list-item-inform">
+            <div class="hotfilm-list-item-inform-text">${hotFilmFirstLists[i].title}</div>
+            <div class="hotfilm-list-item-inform-day">${hotFilmFirstLists[i].view}</div>
         </div>
     `
-    newsItems.innerHTML = htmlNews;
-    newsWrapper.appendChild(newsItems);
+    hotFilmItems.innerHTML = htmlHotFilm;
+    hotFilmItems1Wrapper.appendChild(hotFilmItems);
+    hotFilmWrapper.appendChild(hotFilmItems1Wrapper);
+}
+
+let hotFilmItems2Wrapper = document.createElement('div');
+hotFilmItems2Wrapper.className = 'hotfilm-list-2';
+
+
+for (let i = 0; i < hotfilms.length; i++) {
+    let hotFilmItems2 = document.createElement('div');
+    hotFilmItems2.className = 'hotfilm-list-item';
+    let htmlHotFilm = `
+        <div class="hotfilm-list-item-image">
+            <img src="${hotfilms[i].image}" alt="This is a image">
+        </div>
+        <div class="hotfilm-list-item-inform">
+            <div class="hotfilm-list-item-inform-text">${hotfilms[i].title}</div>
+            <div class="hotfilm-list-item-inform-day">${hotfilms[i].view}</div>
+        </div>
+    `
+    hotFilmItems2.innerHTML = htmlHotFilm;
+    hotFilmItems2Wrapper.appendChild(hotFilmItems2);
+    hotFilmWrapper.appendChild(hotFilmItems2Wrapper);
 
 }
 
+let buttonFilms = document.querySelectorAll('.hotfilm-cinema-wrapper-content-nav-button button');
+buttonFilms[0].className = 'active';
+
+let divItems = document.querySelectorAll('.hotfilm-cinema-wrapper-content>div');
+divItems[1].style.display = 'none';
+
+let selectListFilm = (i) => {
+    Array.from(divItems).forEach((div) => {
+        div.style.display = 'none';
+    })
+    Array.from(buttonFilms).forEach((item) => {
+        item.className =  item.className.replace('active', '');
+    })
+    divItems[i].style.display = 'grid'
+    buttonFilms[i].className += 'active'
+}
+
+Array.from(buttonFilms).forEach((button, index) => {
+    button.addEventListener('click', () => {
+        selectListFilm(index);
+    })
+})
+
+let hotFilmItems = document.querySelectorAll('.hotfilm-list-item');
+let itemsHeight = hotFilmItems[2].clientHeight;
+console.log(itemsHeight);
+
+hotFilmWrapper.style = `height:${itemsHeight * 2 + 24}px`;
