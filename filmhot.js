@@ -43,8 +43,8 @@ let hotFilmFirstLists = [
     },
     {
         id: 8,
-        image: 'https://static.mservice.io/blogscontents/s770x370/momo-upload-api-230512163947-638195063873560329.jpg',
-        title: 'Xem FPT Play cực đã, thanh toán MoMo giảm ngay 10% tối đa 15.000Đ!',
+        image: 'https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220607210130-637902324900234426.jpg',
+        title: 'Top phim xã hội đen Thái Lan cực mãn nhãn',
         view: ' 6.2K lượt xem'
     },
     {
@@ -162,8 +162,8 @@ for (let i = 0; i < hotFilmFirstLists.length; i++) {
         </div>
         <div class="hotfilm-list-item-inform">
             <div class="hotfilm-list-item-inform-text">${hotFilmFirstLists[i].title}</div>
-            <div class="hotfilm-list-item-inform-day">${hotFilmFirstLists[i].view}</div>
         </div>
+        <div class="hotfilm-list-item-inform-day">${hotFilmFirstLists[i].view}</div>
     `
     hotFilmItems.innerHTML = htmlHotFilm;
     hotFilmItems1Wrapper.appendChild(hotFilmItems);
@@ -183,8 +183,8 @@ for (let i = 0; i < hotfilms.length; i++) {
         </div>
         <div class="hotfilm-list-item-inform">
             <div class="hotfilm-list-item-inform-text">${hotfilms[i].title}</div>
-            <div class="hotfilm-list-item-inform-day">${hotfilms[i].view}</div>
         </div>
+        <div class="hotfilm-list-item-inform-day">${hotfilms[i].view}</div>
     `
     hotFilmItems2.innerHTML = htmlHotFilm;
     hotFilmItems2Wrapper.appendChild(hotFilmItems2);
@@ -217,6 +217,19 @@ Array.from(buttonFilms).forEach((button, index) => {
 
 let hotFilmItems = document.querySelectorAll('.hotfilm-list-item');
 let itemsHeight = hotFilmItems[2].clientHeight;
-console.log(itemsHeight);
 
-hotFilmWrapper.style = `height:${itemsHeight * 2 + 24}px`;
+let heightInitial = itemsHeight * 2 + 24;
+
+hotFilmWrapper.style = `height:${heightInitial}px`;
+
+let addHeight = () => {
+    if (heightInitial < itemsHeight * 3 + 24 * 2) {
+        heightInitial += itemsHeight + 24;
+        hotFilmWrapper.style = `height:${heightInitial}px`;
+        console.log(heightInitial);
+        console.log(heightInitial + itemsHeight + 24);
+    
+    }
+}
+let buttonFilmHot = document.querySelector('.hotfilm-cinema-wrapper-button-wrapper');
+buttonFilmHot.addEventListener('click', () => addHeight());

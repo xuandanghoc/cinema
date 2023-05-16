@@ -1236,6 +1236,7 @@ body li {
 }
 .comment-movie-button i {
     padding-right: 6px;
+    animation: move 1s infinite linear;
 }
 .comment-movie-button .comment-movie-button-wrapper {
     cursor: pointer;
@@ -1339,19 +1340,32 @@ body li {
     background-color: #cd2885;
 }
 
-/* news cinema  */
-
+/* film hot cinema  */
+#hotfilm-cinema {
+    background-color: rgb(254,240,246);
+}
 #hotfilm-cinema .hotfilm-cinema-wrapper {
-    padding: 0 2rem;
+    padding: 3.5rem 2rem;
+}
+.hotfilm-cinema-wrapper-top h1 {
+    margin-bottom: 0.5rem;
+    line-height: 2.25rem;
+}
+.hotfilm-cinema-wrapper-top>p {
+    line-height: 1.75rem;
 }
 .hotfilm-cinema-wrapper-content>div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
+.hotfilm-cinema-wrapper .hotfilm-cinema-wrapper-content {
+    overflow: hidden;
+}
 .hotfilm-cinema-wrapper-content>div>div {
     cursor: pointer;
     padding-bottom: 0.5rem;
+    height: auto;
 }
 .hotfilm-cinema-wrapper-content>div>div:hover .hotfilm-list-item-inform-text {
     color: #d82d8d;
@@ -1364,7 +1378,7 @@ body li {
 }
 
 .hotfilm-list-item-inform-text {
-    font-size: 1rem;
+    font-size: .95rem;
     color: #000000;
     font-weight: 550;
     line-height: 1.2rem;
@@ -1407,6 +1421,25 @@ body li {
         border-bottom: 2px solid #d82d8d;
         color: #2e2b2b;
     }
+}
+.hotfilm-cinema-wrapper-button {
+    padding-top: 1.5rem;
+}
+.hotfilm-cinema-wrapper-button-wrapper i {
+    padding-right: 6px;
+    color: #d82d8d;
+    animation: move 1s infinite linear;
+}
+.hotfilm-cinema-wrapper-button-wrapper span {
+    font-size: 1rem;
+    font-weight: 550;
+    color: #d82d8d;
+}
+
+@keyframes move {
+    0% {transform: translateY(-2px);}
+    50% {transform: translateY(0);}
+    100% {transform: translateY(2px);}
 }
 
 
