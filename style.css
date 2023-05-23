@@ -1370,21 +1370,24 @@ body li {
 .hotfilm-cinema-wrapper-content>div>div:hover .hotfilm-list-item-inform-text {
     color: #d82d8d;
 }
-.hotfilm-list-item .hotfilm-list-item-image img {
+.hotfilm-list-item .hotfilm-list-item-image img, 
+.news-list-item-image img {
     width: 100%;
     height: 122px;
     object-fit: contain;
     border-radius: 6px;
 }
 
-.hotfilm-list-item-inform-text {
+.hotfilm-list-item-inform-text, 
+.news-list-item-inform .news-list-item-inform-text {
     font-size: .95rem;
     color: #000000;
     font-weight: 550;
     line-height: 1.2rem;
     padding: 0.75rem 0 0.5rem 0;
 }
-.hotfilm-list-item-inform-day {
+.hotfilm-list-item-inform-day, 
+.news-list-item-inform-day {
     font-size: .75rem;
     color: #928d8d;
     line-height: 1rem;
@@ -1443,6 +1446,26 @@ body li {
 }
 
 
+
+.news-cinema-wrapper .news-cinema-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+#news-cinema .news-cinema-wrapper {
+    padding: 3.5rem 2rem;
+}
+.news-cinema-list-item {
+    position: relative;
+}
+.news-list-item-inform .news-list-item-inform-text {
+    padding: 0 1rem;
+}
+.news-cinema-list-item .news-list-item-inform-day {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+}
 
 
 
